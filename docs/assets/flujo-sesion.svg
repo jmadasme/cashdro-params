@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 900" width="1100" height="900" role="img" aria-labelledby="tituloFlujo descFlujo">
+  <title id="tituloFlujo">Flujo de una sesión de operación</title>
+  <desc id="descFlujo">Ocho pasos de una sesión: arranque y lectura de parámetros, autenticación local, carga del parque de máquinas, selección de equipo, consulta de diagnóstico, consulta de niveles por denominación, evaluación del umbral de fianza y persistencia periódica en SQL Server.</desc>
+
+  <defs>
+    <linearGradient id="bgFlujo" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#081a22"/>
+      <stop offset="1" stop-color="#06141b"/>
+    </linearGradient>
+    <style>
+      .kicker { font: 600 11px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 2.4px; fill: #2A9D8F; }
+      .h1 { font: 600 27px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E6EEF2; }
+      .sub { font: 400 12.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #9DB2BE; }
+      .stepTitle { font: 600 12.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E6EEF2; }
+      .stepText { font: 400 10.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #9DB2BE; }
+      .stepMono { font: 400 10.5px 'Cascadia Mono', 'Consolas', 'SFMono-Regular', monospace; fill: #2A9D8F; }
+      .side { font: 400 10px 'Cascadia Mono', 'Consolas', 'SFMono-Regular', monospace; fill: #5B7C99; }
+      .num { font: 600 12px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E6EEF2; }
+      .foot { font: 400 11.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #C6D6DF; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="900" fill="url(#bgFlujo)"/>
+
+  <text class="kicker" x="48" y="54">CASHDRO · LECTURA DE PARÁMETROS</text>
+  <text class="h1" x="48" y="90">Flujo de una sesión</text>
+  <text class="sub" x="48" y="116">Del arranque del formulario a la persistencia periódica de estados y niveles</text>
+
+  <!-- riel -->
+  <line x1="96" y1="176" x2="96" y2="792" stroke="#1B3A46" stroke-width="2"/>
+
+  <!-- 1 -->
+  <circle cx="96" cy="176" r="17" fill="#06141b" stroke="#2A9D8F" stroke-width="1.6"/>
+  <text class="num" x="96" y="181" text-anchor="middle">1</text>
+  <rect x="140" y="144" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="168">Arranque del formulario</text>
+  <text class="stepText" x="160" y="190">Form1_Load invoca LeerParametros() y habilita el temporizador de 30 minutos.</text>
+  <line x1="846" y1="162" x2="846" y2="190" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="178">SQL · GetParametros</text>
+
+  <!-- 2 -->
+  <circle cx="96" cy="264" r="17" fill="#06141b" stroke="#2A9D8F" stroke-width="1.6"/>
+  <text class="num" x="96" y="269" text-anchor="middle">2</text>
+  <rect x="140" y="232" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="256">Autenticación local</text>
+  <text class="stepText" x="160" y="278">ValidaUsuario compara usuario y clave contra la tabla reservada [user].</text>
+  <line x1="846" y1="250" x2="846" y2="278" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="266">SQL · tabla [user]</text>
+
+  <!-- 3 -->
+  <circle cx="96" cy="352" r="17" fill="#06141b" stroke="#2A9D8F" stroke-width="1.6"/>
+  <text class="num" x="96" y="357" text-anchor="middle">3</text>
+  <rect x="140" y="320" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="344">Carga del parque</text>
+  <text class="stepText" x="160" y="366">getCasdro devuelve id, IP, alias y correo; getError() pinta el semáforo por equipo.</text>
+  <line x1="846" y1="338" x2="846" y2="366" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="354">SQL · getCasdro</text>
+
+  <!-- 4 -->
+  <circle cx="96" cy="440" r="17" fill="#06141b" stroke="#457B9D" stroke-width="1.6"/>
+  <text class="num" x="96" y="445" text-anchor="middle">4</text>
+  <rect x="140" y="408" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="432">Selección de equipo</text>
+  <text class="stepText" x="160" y="454">Clic en la columna ESTADO: se limpian las grillas y se consultan diagnóstico y niveles.</text>
+  <line x1="846" y1="426" x2="846" y2="454" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="442">estado en memoria</text>
+
+  <!-- 5 -->
+  <circle cx="96" cy="528" r="17" fill="#06141b" stroke="#457B9D" stroke-width="1.6"/>
+  <text class="num" x="96" y="533" text-anchor="middle">5</text>
+  <rect x="140" y="496" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="520">Diagnóstico de dispositivos</text>
+  <text class="stepText" x="160" y="542">operation=getDiagnosis devuelve deviceId, deviceName y deviceWithError por dispositivo.</text>
+  <line x1="846" y1="514" x2="846" y2="542" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="530">JSON · RootObjectDevice</text>
+
+  <!-- 6 -->
+  <circle cx="96" cy="616" r="17" fill="#06141b" stroke="#457B9D" stroke-width="1.6"/>
+  <text class="num" x="96" y="621" text-anchor="middle">6</text>
+  <rect x="140" y="584" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="608">Niveles por denominación</text>
+  <text class="stepText" x="160" y="630">operation=getPiecesCurrency (CLP, includeLevels=1): Value, DepositLevel, LevelRecycler, MaxLevel.</text>
+  <line x1="846" y1="602" x2="846" y2="630" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="618">JSON · RootObjectDatum</text>
+
+  <!-- 7 -->
+  <circle cx="96" cy="704" r="17" fill="#06141b" stroke="#5B7C99" stroke-width="1.6"/>
+  <text class="num" x="96" y="709" text-anchor="middle">7</text>
+  <rect x="140" y="672" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="696">Evaluación del umbral</text>
+  <text class="stepText" x="160" y="718">Si LevelRecycler es menor que DepositLevel se marca alerta sobre la fila de la denominación.</text>
+  <line x1="846" y1="690" x2="846" y2="718" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="706">icono warning.png</text>
+
+  <!-- 8 -->
+  <circle cx="96" cy="792" r="17" fill="#06141b" stroke="#5B7C99" stroke-width="1.6"/>
+  <text class="num" x="96" y="797" text-anchor="middle">8</text>
+  <rect x="140" y="760" width="690" height="64" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="stepTitle" x="160" y="784">Persistencia periódica</text>
+  <text class="stepText" x="160" y="806">Cada 30 minutos, por cada equipo: pInsertDevices y pInsertdata con el histórico.</text>
+  <line x1="846" y1="778" x2="846" y2="806" stroke="#1B3A46" stroke-width="2"/>
+  <text class="side" x="858" y="794">SQL · procedimientos</text>
+
+  <!-- nota -->
+  <rect x="40" y="846" width="1020" height="38" rx="10" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="foot" x="60" y="870">Los pasos 4 a 7 son manuales. El paso 8 corre sólo: recorre todo el parque sin intervención del operador.</text>
+</svg>
