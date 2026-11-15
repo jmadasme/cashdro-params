@@ -1,0 +1,116 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 780" width="1100" height="780" role="img" aria-labelledby="tituloArq descArq">
+  <title id="tituloArq">Arquitectura de la aplicación de lectura de parámetros CashDro</title>
+  <desc id="descArq">Diagrama por capas: una aplicación WinForms con cinco módulos funcionales se apoya en tres adaptadores (cliente HTTP con JSON, navegador Chromium embebido y cliente SMTP) que hablan con SQL Server, el endpoint Cashdro3WS, la interfaz Cashdro3Web y un servidor de correo.</desc>
+
+  <defs>
+    <linearGradient id="bgArq" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#081a22"/>
+      <stop offset="1" stop-color="#06141b"/>
+    </linearGradient>
+    <marker id="flechaArq" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#2A9D8F"/>
+    </marker>
+    <style>
+      .kicker { font: 600 11px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 2.4px; fill: #2A9D8F; }
+      .h1 { font: 600 27px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E6EEF2; }
+      .sub { font: 400 12.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #9DB2BE; }
+      .bandLabel { font: 600 10.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; letter-spacing: 1.6px; fill: #5B7C99; }
+      .chipTitle { font: 600 13px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E6EEF2; }
+      .chipMono { font: 400 10.5px 'Cascadia Mono', 'Consolas', 'SFMono-Regular', monospace; fill: #7FA6B4; }
+      .link { font: 400 10.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #5B7C99; }
+      .note { font: 400 11.5px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #C6D6DF; }
+      .boxTitle { font: 600 13px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #E6EEF2; }
+      .boxMono { font: 400 10px 'Cascadia Mono', 'Consolas', 'SFMono-Regular', monospace; fill: #2A9D8F; }
+      .boxNote { font: 400 10px 'Segoe UI', 'Helvetica Neue', Arial, sans-serif; fill: #7FA6B4; }
+    </style>
+  </defs>
+
+  <rect width="1100" height="780" fill="url(#bgArq)"/>
+
+  <!-- Encabezado -->
+  <text class="kicker" x="48" y="54">CASHDRO · LECTURA DE PARÁMETROS</text>
+  <text class="h1" x="48" y="90">Arquitectura de la aplicación</text>
+  <text class="sub" x="48" y="116">WinForms · .NET Framework 4.6.1 · SQL Server · endpoint Cashdro3WS</text>
+
+  <!-- Banda 1: presentación -->
+  <rect x="40" y="140" width="1020" height="140" rx="14" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="bandLabel" x="64" y="168">CAPA DE PRESENTACIÓN · FORM1</text>
+
+  <g>
+    <rect x="62" y="186" width="182" height="72" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="chipTitle" x="78" y="215">LOGIN</text>
+    <text class="chipMono" x="78" y="238">usuario · clave</text>
+
+    <rect x="258" y="186" width="182" height="72" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="chipTitle" x="274" y="215">PARQUE</text>
+    <text class="chipMono" x="274" y="238">getCasdro</text>
+
+    <rect x="454" y="186" width="182" height="72" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="chipTitle" x="470" y="215">ESTADO TÉCNICO</text>
+    <text class="chipMono" x="470" y="238">getDiagnosis</text>
+
+    <rect x="650" y="186" width="182" height="72" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="chipTitle" x="666" y="215">NIVELES</text>
+    <text class="chipMono" x="666" y="238">getPiecesCurrency</text>
+
+    <rect x="846" y="186" width="182" height="72" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="chipTitle" x="862" y="215">TIMER</text>
+    <text class="chipMono" x="862" y="238">cada 30 minutos</text>
+  </g>
+
+  <!-- Conector 1 -->
+  <line x1="550" y1="282" x2="550" y2="318" stroke="#2A9D8F" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#flechaArq)"/>
+  <text class="link" x="566" y="305">llamadas síncronas en el hilo de interfaz</text>
+
+  <!-- Banda 2: integración -->
+  <rect x="40" y="326" width="1020" height="110" rx="14" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="bandLabel" x="64" y="354">CAPA DE INTEGRACIÓN</text>
+
+  <g>
+    <rect x="62" y="370" width="316" height="48" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="boxMono" x="80" y="399">WebClient + Newtonsoft.Json</text>
+
+    <rect x="396" y="370" width="316" height="48" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="boxMono" x="414" y="399">CefSharp 71 · ChromiumWebBrowser</text>
+
+    <rect x="730" y="370" width="316" height="48" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="boxMono" x="748" y="399">SmtpClient · SMTP 587</text>
+  </g>
+
+  <!-- Conector 2 -->
+  <line x1="550" y1="438" x2="550" y2="474" stroke="#2A9D8F" stroke-width="1.5" stroke-dasharray="4 3" marker-end="url(#flechaArq)"/>
+  <text class="link" x="566" y="461">ADO.NET · HTTPS con TLS · SMTPS</text>
+
+  <!-- Banda 3: destinos -->
+  <rect x="40" y="482" width="1020" height="150" rx="14" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="bandLabel" x="64" y="510">SISTEMAS DESTINO</text>
+
+  <g>
+    <rect x="62" y="528" width="232" height="86" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="boxTitle" x="78" y="552">SQL Server</text>
+    <text class="boxMono" x="78" y="574">GestionCashdro</text>
+    <text class="boxNote" x="78" y="594">tablas y procedimientos</text>
+
+    <rect x="314" y="528" width="232" height="86" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="boxTitle" x="330" y="552">Cashdro3WS</text>
+    <text class="boxMono" x="330" y="574">/Cashdro3WS/index.php</text>
+    <text class="boxNote" x="330" y="594">JSON · certificado propio</text>
+
+    <rect x="566" y="528" width="232" height="86" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="boxTitle" x="582" y="552">Cashdro3Web</text>
+    <text class="boxMono" x="582" y="574">/Cashdro3Web/#/diagnosis</text>
+    <text class="boxNote" x="582" y="594">interfaz web en CEF</text>
+
+    <rect x="818" y="528" width="232" height="86" rx="10" fill="#0D242E" stroke="#1B3A46"/>
+    <text class="boxTitle" x="834" y="552">Servidor de correo</text>
+    <text class="boxMono" x="834" y="574">smtp :587 · STARTTLS</text>
+    <text class="boxNote" x="834" y="594">avisos al operador</text>
+  </g>
+
+  <!-- Hallazgos -->
+  <rect x="40" y="664" width="1020" height="96" rx="14" fill="#0A1C25" stroke="#1B3A46"/>
+  <text class="bandLabel" x="64" y="690">HALLAZGOS DE DISEÑO A TENER EN CUENTA</text>
+  <text class="note" x="64" y="712">· El certificado TLS del equipo se acepta sin validar (ServicePointManager e IgnoreCertificateErrors).</text>
+  <text class="note" x="64" y="732">· Las credenciales de CashDro viajan como parámetros en la URL de cada petición.</text>
+  <text class="note" x="64" y="752">· No hay timeouts explícitos, reintentos ni verificación del campo code de la respuesta.</text>
+</svg>

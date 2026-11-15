@@ -994,3 +994,54 @@ elaboró sobre esa versión, sin modificarla.
 > **Aviso final**: esta es una herramienta de monitoreo, no un sistema de control. Toda
 > decisión sobre efectivo, recargue o intervención técnica debe validarse en la máquina y
 > con el procedimiento del fabricante.
+
+## Ficha de evaluación
+
+**Madurez global: 3.5/5**
+
+| Criterio | Nota | Evidencia |
+|---|---:|---|
+| Madurez | 3/5 | Herramienta operativa completa en su lógica, aunque sin compilación ni pruebas verificadas. |
+| Reproducibilidad | 2/5 | Faltan archivos de proyecto y un componente comercial; reconstruir el entorno exige trabajo manual. |
+| Documentación | 5/5 | README detallado con arquitectura, endpoints, hallazgos de seguridad y guía de reconstrucción. |
+| Honestidad de límites | 5/5 | Declara análisis estático, falta de pruebas con hardware y cada defecto conocido. |
+| Valor demostrativo | 4/5 | Ejemplo real de integración WinForms con SQL Server, CefSharp y APIs de hardware. |
+| Facilidad de despliegue | 2/5 | Solo Windows, con SQL Server, certificados, componentes comerciales y rutas locales. |
+
+Herramienta de supervisión descrita con rigor, pero difícil de reproducir: depende de Windows, SQL Server y componentes ausentes, y no fue compilada ni probada contra hardware.
+
+## Lo que no funcionó
+
+### CashDroParams — Validación TLS desactivada
+
+Para aceptar los certificados autofirmados de las máquinas, el código desactiva globalmente la validación TLS con ServerCertificateValidationCallback e IgnoreCertificateErrors. La alternativa documentada es instalar el certificado en TrustedPeople; se mantuvo el comportamiento original y se lo señaló como la decisión más riesgosa del proyecto.
+
+### CashDroParams — El barrido vacía la grilla
+
+El barrido automático de treinta minutos limpia la grilla visible y no la vuelve a poblar, de modo que el parque parece vacío tras la primera ejecución. El README describe el defecto y la forma de revalidar manualmente; no se corrigió porque el análisis se limitó a documentar el código recibido.
+
+### CashDroParams — Equipos en falla no inspeccionables
+
+Los equipos marcados con advertencia tienen la celda en ReadOnly, así que no se puede abrir su detalle desde la aplicación. El README reconoce que la inspección debe hacerse en la consola del fabricante y deja la limitación como parte del comportamiento heredado, sin prometer una solución.
+
+### CashDroParams — Proyecto incompleto
+
+El árbol publicado no compila tal cual: faltan Properties/AssemblyInfo.cs, Resources, Settings, packages y la dependencia DevComponents DotNetBar 14.1.0.18. También hay iconos referenciados desde D:\imagenes. El README enumera los archivos faltantes y explica cómo recrearlos, en lugar de afirmar una compilación que no verificó.
+
+## Preguntas típicas
+
+**¿Qué es este proyecto?**
+
+Una aplicación WinForms que consulta máquinas CashDro por HTTPS/JSON y muestra diagnóstico, piezas por moneda y estado en tres grillas, con barrido automático cada 30 minutos hacia SQL Server.
+
+**¿Funciona tal como se publica?**
+
+No. El proyecto no incluye Properties/AssemblyInfo.cs, Resources, Settings, packages ni DevComponents DotNetBar 14.1.0.18, y el README aclara que no se compiló ni probó contra hardware.
+
+**¿Qué límites operativos tiene?**
+
+Desactiva la validación TLS para aceptar certificados autofirmados, el barrido vacía la grilla visible y los equipos en advertencia no se pueden inspeccionar; además no hay reintentos ni timeouts y la moneda está fija en CLP.
+
+**¿Cómo se despliega?**
+
+Solo en Windows con .NET Framework 4.6.1, SQL Server con la base GestionCashdro y CefSharp; hay que recrear los archivos faltantes, instalar DotNetBar y corregir las rutas D:\imagenes.

@@ -134,6 +134,75 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   .stat{border-right:0;border-bottom:1px solid var(--line)}
   h1{font-size:42px}
 }
+
+/* ── Contenido heredado del proyecto original, en clave sobria ── */
+.rich{max-width:78ch}
+.rich p{margin:0 0 14px;color:#c3d4da}
+.rich h3{margin:26px 0 10px;font-size:19px;letter-spacing:-.02em}
+.rich h4{margin:22px 0 8px;font-size:15px;letter-spacing:-.01em}
+.rich ul,.rich ol{margin:0 0 16px;padding-left:22px;color:#c3d4da}
+.rich li{margin:0 0 6px}
+.rich figure{margin:22px 0;border:1px solid var(--line);border-radius:16px;padding:10px;background:rgba(11,34,43,.5)}
+.rich figure img{width:100%;display:block;border-radius:10px}
+.rich figcaption{font-family:var(--mono);font-size:11px;color:var(--muted);margin-top:9px;line-height:1.5}
+.rich .table-wrap{overflow-x:auto;margin:18px 0;border:1px solid var(--line);border-radius:12px}
+.rich table{border-collapse:collapse;width:100%;font-size:13.5px}
+.rich th,.rich td{padding:9px 12px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.rich th{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);background:rgba(11,34,43,.6)}
+.rich tr:last-child td{border-bottom:0}
+.rich pre{margin:18px 0;padding:14px 16px;border:1px solid var(--line);border-radius:12px;background:#04141a;overflow-x:auto;font-family:var(--mono);font-size:12px;line-height:1.6;color:#cfe3e8}
+.rich code{font-family:var(--mono);font-size:.92em}
+.rich .note{margin:18px 0;padding:13px 16px;border-left:2px solid var(--accent);background:rgba(42,157,143,.07);color:#c3d4da;font-size:14px}
+.rich .card-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px;margin:18px 0}
+.rich .card-grid .card{margin:0}
+
+
+.rich h3{margin:26px 0 8px}
+.rich p{margin:0 0 14px;color:var(--muted);line-height:1.7}
+.fail-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px;margin-top:6px}
+.fail{background:rgba(11,34,43,.55);border:1px solid var(--line);border-radius:14px;padding:18px}
+.fail .v{font-family:var(--mono);font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--warm,#D6A86A)}
+.fail h3{font-size:16px;margin:8px 0 6px}
+.fail p{font-size:14px;margin:0;color:var(--muted)}
+.rating-head{display:flex;align-items:center;gap:20px;margin:6px 0 18px;padding:18px 20px;border:1px solid var(--line);border-radius:16px;background:rgba(11,34,43,.55)}
+.rating-avg{font-family:var(--mono);font-size:40px;line-height:1;color:var(--accent)}
+.rating-avg small{font-size:14px;color:var(--muted)}
+.rating-head p{margin:4px 0 0;font-size:14px;color:var(--muted);max-width:70ch}
+.rating{display:grid;gap:2px}
+.rating-row{display:grid;grid-template-columns:165px minmax(90px,1fr) 48px;gap:14px;align-items:center;padding:11px 0;border-bottom:1px solid var(--line)}
+.rating-row:last-child{border-bottom:0}
+.rating-name{font-size:13.5px;font-weight:600}
+.rating-bar{height:6px;border-radius:99px;background:rgba(148,190,200,.14);overflow:hidden}
+.rating-bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
+.rating-score{font-family:var(--mono);font-size:12.5px;color:var(--accent);text-align:right}
+.rating-note{grid-column:2/-1;font-size:12.5px;color:var(--muted);margin-top:-4px}
+.faq{display:grid;gap:0;margin-top:4px}
+.faq details{border-bottom:1px solid var(--line);padding:14px 0}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::before{content:"+";display:inline-block;width:18px;color:var(--accent);font-family:var(--mono)}
+.faq details[open] summary::before{content:"–"}
+.faq p{margin:10px 0 0 18px;font-size:14px;color:var(--muted)}
+@media(max-width:720px){
+  .fail-grid{grid-template-columns:1fr}
+  .rating-head{flex-direction:column;align-items:flex-start}
+  .rating-row{grid-template-columns:120px 1fr 44px}
+}
+
+
+.detail h2{margin:34px 0 10px;font-size:24px;letter-spacing:-.02em}
+.detail h3{margin:24px 0 8px;font-size:17px}
+.detail p{margin:0 0 14px;color:var(--muted);line-height:1.75}
+.detail ul,.detail ol{margin:0 0 16px 20px;color:var(--muted)}
+.detail li{margin:6px 0}
+.detail table{width:100%;border-collapse:collapse;margin:14px 0;font-size:13.5px}
+.detail th,.detail td{border-bottom:1px solid var(--line);padding:9px 10px;text-align:left;vertical-align:top}
+.detail th{font-family:var(--mono);font-size:11px;text-transform:uppercase;letter-spacing:.06em;color:var(--accent)}
+.detail pre{background:rgba(6,20,27,.75);border:1px solid var(--line);border-radius:12px;padding:14px;overflow:auto;font-size:13px}
+.detail code{font-family:var(--mono);font-size:.92em}
+.detail img{max-width:100%;border-radius:12px;border:1px solid var(--line)}
+.detail blockquote{border-left:2px solid var(--accent);margin:14px 0;padding:2px 0 2px 16px;color:var(--muted)}
+
 </style>
 <link rel="stylesheet" href="assets/community.css?v=1">
 </head>
@@ -168,51 +237,1614 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   </div>
 </div></section>
 
-<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">C#</div><div class="stat-label">WinForms</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">versión</div></div><div class="stat"><div class="stat-num">HTTPS</div><div class="stat-label">API CashDro</div></div><div class="stat"><div class="stat-num">Windows</div><div class="stat-label">plataforma</div></div></div></section>
+<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">C#</div><div class="stat-label">WinForms</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">versión</div></div><div class="stat"><div class="stat-num">HTTPS</div><div class="stat-label">API CashDro</div></div><div class="stat"><div class="stat-num">Windows</div><div class="stat-label">plataforma</div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>Aplicación de escritorio para supervisar un parque de máquinas CashDro desde Windows. Consulta cada equipo por HTTPS y JSON, muestra diagnóstico, piezas por moneda y estado en tres grillas, y ejecuta un barrido automático cada treinta minutos que persiste los resultados en SQL Server. Está destinada a operadores de sala de juegos o retail que necesitan una vista consolidada sin entrar máquina por máquina.</p><p>El repositorio conserva el código de una herramienta operativa, no un producto instalable: depende de .NET Framework 4.6.1, CefSharp, SQL Server y componentes comerciales. La documentación proviene de análisis estático y declara que no se compiló ni se probó contra hardware; ese contexto explica sus decisiones más discutibles, como desactivar la validación TLS o limpiar la grilla durante el barrido.</p></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El proyecto en detalle</div><h2>Documentación preservada</h2><p class="section-sub">El README original, completo y en su contexto.</p></div><div class="detail rich reveal">
+<p><strong>Aplicación de escritorio para consultar los parámetros técnicos y financieros de un
+parque de máquinas CashDro desde un único puesto Windows.</strong></p>
+<p><code>C#</code> · <code>WinForms</code> · <code>.NET Framework 4.6.1</code> · <code>SQL Server</code> · <code>CefSharp</code> · <code>Licencia MIT</code></p>
+<hr/>
+<h2 id="tabla-de-contenido">Tabla de contenido</h2>
+<ol>
+<li><a href="#1-qué-es">Qué es</a></li>
+<li><a href="#2-el-problema-que-resuelve">El problema que resuelve</a></li>
+<li><a href="#3-principio-de-funcionamiento">Principio de funcionamiento</a></li>
+<li><a href="#4-la-pantalla">La pantalla</a></li>
+<li><a href="#5-arquitectura">Arquitectura</a></li>
+<li><a href="#6-flujo-de-una-sesión">Flujo de una sesión</a></li>
+<li><a href="#7-conexión-con-cashdro">Conexión con CashDro</a></li>
+<li><a href="#8-parámetros-leídos">Parámetros leídos</a></li>
+<li><a href="#9-modelo-de-niveles">Modelo de niveles</a></li>
+<li><a href="#10-persistencia-en-sql-server">Persistencia en SQL Server</a></li>
+<li><a href="#11-configuración">Configuración</a></li>
+<li><a href="#12-compilación">Compilación</a></li>
+<li><a href="#13-operación">Operación</a></li>
+<li><a href="#14-ejemplos-de-uso">Ejemplos de uso</a></li>
+<li><a href="#15-ajuste-de-umbrales">Ajuste de umbrales</a></li>
+<li><a href="#16-códigos-de-error-y-diagnóstico">Códigos de error y diagnóstico</a></li>
+<li><a href="#17-seguridad">Seguridad</a></li>
+<li><a href="#18-límites-y-estado-de-esta-revisión">Límites y estado de esta revisión</a></li>
+<li><a href="#19-estructura-del-repositorio">Estructura del repositorio</a></li>
+<li><a href="#20-documentación-adicional">Documentación adicional</a></li>
+<li><a href="#21-licencia">Licencia</a></li>
+</ol>
+<hr/>
+<h2 id="1-que-es">1. Qué es</h2>
+<p>Un formulario Windows que se conecta por HTTPS a la API interna de cada máquina CashDro,
+lee dos conjuntos de datos y los muestra en tres grillas:</p>
+<table>
+<thead>
+<tr>
+<th>Grilla</th>
+<th>Contenido</th>
+<th>Origen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Parque de máquinas</strong></td>
+<td>Una fila por equipo, con IP, alias y semáforo</td>
+<td>SQL Server (<code>getCasdro</code>)</td>
+</tr>
+<tr>
+<td><strong>Estado técnico</strong></td>
+<td>Un renglón por dispositivo interno del equipo</td>
+<td><code>getDiagnosis</code></td>
+</tr>
+<tr>
+<td><strong>Consulta niveles On Line</strong></td>
+<td>Un renglón por denominación, con fianza, total y recuento</td>
+<td><code>getPiecesCurrency</code></td>
+</tr>
+</tbody>
+</table>
+<p>Además, cada 30 minutos recorre todo el parque y escribe el resultado en SQL Server, de
+modo que se construye un histórico de estados y niveles sin intervención humana.</p>
+<blockquote>
+<p><strong>Alcance</strong>: aplicación de <strong>solo lectura</strong>. No configura, no carga, no retira y no
+reinicia nada en la máquina. Consulta y registra.</p>
+</blockquote>
+<h3 id="11-ficha-rapida">1.1 Ficha rápida</h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Valor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nombre del proyecto</td>
+<td><code>cashdro</code></td>
+</tr>
+<tr>
+<td>Tipo</td>
+<td><code>WinExe</code> (aplicación de escritorio)</td>
+</tr>
+<tr>
+<td>Framework</td>
+<td>.NET Framework 4.6.1</td>
+</tr>
+<tr>
+<td>Solución</td>
+<td>Visual Studio 2017, formato 12.00</td>
+</tr>
+<tr>
+<td>Plataforma</td>
+<td><strong>Windows únicamente</strong></td>
+</tr>
+<tr>
+<td>Persistencia</td>
+<td>SQL Server, base <code>GestionCashdro</code></td>
+</tr>
+<tr>
+<td>Interfaz web embebida</td>
+<td>CefSharp 71 (Chromium)</td>
+</tr>
+<tr>
+<td>Moneda</td>
+<td><code>CLP</code>, fija en esta versión</td>
+</tr>
+<tr>
+<td>Intervalo de monitoreo</td>
+<td>30 minutos</td>
+</tr>
+<tr>
+<td>Licencia</td>
+<td>MIT</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="2-el-problema-que-resuelve">2. El problema que resuelve</h2>
+<p>Un operador que administra varias máquinas CashDro enfrenta tres preguntas todos los días:</p>
+<ol>
+<li><strong>¿Alguna máquina tiene un dispositivo en falla?</strong>
+   La consola del fabricante responde bien, pero hay que entrar equipo por equipo.</li>
+<li><strong>¿Algún recirculador quedó por debajo del mínimo?</strong>
+   Si nadie lo nota, la máquina deja de devolver vuelto y el usuario final se queda sin
+   cambio.</li>
+<li><strong>¿Qué pasó ayer a las 15:00 cuando se cayó el lector?</strong>
+   Sin histórico, la respuesta se pierde.</li>
+</ol>
+<p>La aplicación ataca las tres con una sola pantalla y un barrido periódico que persiste el
+estado. El resultado es un tablero de monitoreo mínimo, no un sistema de gestión completo:
+la máquina sigue siendo la fuente de verdad y la configuración se hace en ella.</p>
+<h3 id="21-escenario-tipico">2.1 Escenario típico</h3>
+<pre><code class="language-text">07:50  El operador abre la aplicación y valida su usuario local.
+07:51  Ve 12 máquinas: 11 con ✓ y una con ⚠.
+07:52  La máquina 7 no responde: el semáforo está en rojo por criterio conservador.
+07:55  El operador revisa el switch de la sucursal y la máquina vuelve.
+08:00  Selecciona la máquina 3 y confirma que la denominación de $100 está bajo fianza.
+08:01  Abre la consola web embebida y pide el recargue al supervisor.
+08:30  El barrido automático guarda el estado de todo el parque en SQL Server.
+</code></pre>
+<hr/>
+<h2 id="3-principio-de-funcionamiento">3. Principio de funcionamiento</h2>
+<p>No hay sensor ni bus de campo: el principio es <strong>sondeo HTTP con contrato JSON sobre una
+red local</strong>.</p>
+<pre><code class="language-text">   Petición GET (HTTPS, certificado autofirmado)
+   ─────────────────────────────────────────────►
+   https://&lt;IP_EQUIPO&gt;/Cashdro3WS/index.php?operation=getDiagnosis
 
-<section class="section" id="proyecto"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">01 — El proyecto</div><h2>Qué resuelve</h2><p class="section-sub">Aplicación C# WinForms para conectarse a una máquina CashDro y leer parámetros de configuración, estado y diagnóstico desde una interfaz de escritorio.</p></div>
-  <div class="two">
-    <div class="card reveal"><span class="tag">Problema</span><h3>El punto de partida</h3><p>Los parámetros de una CashDro no siempre son visibles desde la máquina; revisarlos a mano es lento y propenso a error.</p></div>
-    <div class="card reveal"><span class="tag">Solución</span><h3>La propuesta</h3><p>Una app de escritorio que consulta la API, ordena los datos y muestra los valores relevantes.</p></div>
-  </div>
-</div></section>
+   Respuesta JSON
+   ◄─────────────────────────────────────────────
+   { "code": 0, "data": { "WithError": false, "Devices": [ ... ] } }
+</code></pre>
+<p>Cuatro ideas sostienen el diseño:</p>
+<ol>
+<li><strong>La máquina expone su estado por HTTP.</strong> El servicio <code>Cashdro3WS</code> publica operaciones
+   tipo RPC (<code>operation=...</code>) que devuelven JSON. No hay SDK ni base de datos directa.</li>
+<li><strong>El certificado es autofirmado.</strong> Por eso la aplicación desactiva la validación TLS
+   (<code>ServicePointManager.ServerCertificateValidationCallback</code> y
+   <code>IgnoreCertificateErrors</code> en CEF). Es la decisión de diseño más discutible del
+   proyecto y se analiza en §17.</li>
+<li><strong>La autenticación viaja en la URL.</strong> El usuario y la clave de CashDro se concatenan
+   como parámetros de la query string en las operaciones que los requieren.</li>
+<li><strong>El estado se persiste por sondeo.</strong> Un <code>System.Windows.Forms.Timer</code> dispara cada 30
+   minutos un recorrido secuencial por todas las máquinas y guarda el resultado mediante
+   procedimientos almacenados.</li>
+</ol>
+<h3 id="31-que-se-lee-exactamente">3.1 Qué se lee exactamente</h3>
+<ul>
+<li><strong>Estado técnico</strong>: la lista de dispositivos con un booleano <code>deviceWithError</code>.</li>
+<li><strong>Estado financiero</strong>: por cada denominación, el nivel actual, el mínimo tolerado y la
+  capacidad máxima.</li>
+</ul>
+<p>Nada más. No se leen transacciones, no se leen logs de auditoría y no se modifica la
+configuración del equipo.</p>
+<hr/>
+<h2 id="4-la-pantalla">4. La pantalla</h2>
+<p>El formulario mide 1088 × 580 px, se centra en pantalla y se titula <code>Sistema integrado</code>.
+La disposición es fija (no hay anclaje responsive): está pensada para 1366 × 768 o más.</p>
+<pre><code class="language-text">LOGIN                      Parque de maquinas
+Usuario [________]         Item │ IP Equipo │ Nombre │ ESTADO
+Clave   [********]          1   │ &lt;IP&gt;      │ Caja 1 │   ✓
+        [validar]           2   │ &lt;IP&gt;      │ Caja 2 │   ⚠
 
-<section class="section" id="versiones"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">02 — Versiones</div><h2>La historia, completa.</h2><p class="section-sub">Cada carpeta conserva una etapa del proyecto. No se borraron las anteriores: se pusieron en contexto.</p></div>
-  <div class="versions"><article class="version reveal">
-  <div class="version-top"><h3>Lectura-parametros-maquina-Cashdro</h3><span class="count">1 archivo</span></div>
-  <p>Solución Visual Studio completa: formularios, clases de datos, funciones y configuración.</p>
-  <a href="https://github.com/jmadasme/cashdro-params/tree/main/versions/Lectura-parametros-maquina-Cashdro" target="_blank" rel="noopener">Ver carpeta <svg viewBox="0 0 24 24" width="13" height="13" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
-</article></div>
-</div></section>
+Estado tecnico                        Consulta Niveles On Line
+Item │ Nombre │ Err? │ STATUS         Moneda │ Denom │ Fianza │ Total
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Etiqueta visible</th>
+<th>Panel</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>LOGIN</code></td>
+<td>Usuario y clave locales + botón <code>validar</code></td>
+</tr>
+<tr>
+<td><code>Parque de maquinas</code></td>
+<td>Grilla principal del parque</td>
+</tr>
+<tr>
+<td><code>Estado tecnico</code></td>
+<td>Grilla de dispositivos del equipo elegido</td>
+</tr>
+<tr>
+<td><code>Consulta Niveles On Line</code></td>
+<td>Grilla de denominaciones del equipo elegido</td>
+</tr>
+</tbody>
+</table>
+<p>Los iconos de estado se cargan desde archivos PNG en disco (<code>D:\imagenes\</code>), no desde
+recursos embebidos. Es un detalle de despliegue importante: si esa carpeta no existe, la
+grilla falla al pintar.</p>
+<hr/>
+<h2 id="5-arquitectura">5. Arquitectura</h2>
+<p><img alt="Arquitectura de la aplicación" loading="lazy" src="rich/arquitectura.svg"/></p>
+<h3 id="51-capas">5.1 Capas</h3>
+<table>
+<thead>
+<tr>
+<th>Capa</th>
+<th>Implementación</th>
+<th>Archivo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Presentación</td>
+<td>Un formulario principal y un visor modal</td>
+<td><code>Form1.cs</code>, <code>webBrownser.cs</code></td>
+</tr>
+<tr>
+<td>Integración HTTP</td>
+<td><code>WebClient</code> + <code>JsonConvert</code></td>
+<td><code>Form1.cs</code></td>
+</tr>
+<tr>
+<td>Integración web</td>
+<td><code>ChromiumWebBrowser</code> (CefSharp)</td>
+<td><code>webBrownser.cs</code></td>
+</tr>
+<tr>
+<td>Integración de correo</td>
+<td><code>SmtpClient</code></td>
+<td><code>Form1.cs</code></td>
+</tr>
+<tr>
+<td>Acceso a datos</td>
+<td><code>SqlConnection</code> / <code>SqlCommand</code></td>
+<td><code>Form1.cs</code>, <code>funciones.cs</code></td>
+</tr>
+<tr>
+<td>Contratos</td>
+<td>DTOs planos</td>
+<td><code>dataClass.cs</code></td>
+</tr>
+</tbody>
+</table>
+<p>No hay separación real entre capas: la lógica de negocio, el acceso a datos y la
+manipulación de controles conviven en <code>Form1.cs</code>. La arquitectura es, en la práctica, un
+formulario que hace todo.</p>
+<h3 id="52-archivos">5.2 Archivos</h3>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Rol</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Program.cs</code></td>
+<td>Punto de entrada <code>[STAThread]</code></td>
+</tr>
+<tr>
+<td><code>Form1.cs</code></td>
+<td>Login, consultas, persistencia, alertas</td>
+</tr>
+<tr>
+<td><code>Form1.Designer.cs</code></td>
+<td>Layout y columnas de las tres grillas</td>
+</tr>
+<tr>
+<td><code>dataClass.cs</code></td>
+<td><code>RootObjectDevice</code>, <code>Device</code>, <code>RootObjectDatum</code>, <code>Datum</code></td>
+</tr>
+<tr>
+<td><code>webBrownser.cs</code></td>
+<td>Visor Chromium embebido</td>
+</tr>
+<tr>
+<td><code>funciones.cs</code></td>
+<td>Utilidad de datos sin uso actual</td>
+</tr>
+<tr>
+<td><code>App.config</code></td>
+<td>Runtime .NET 4.6.1 y <code>probing privatePath="x86"</code></td>
+</tr>
+<tr>
+<td><code>packages.config</code></td>
+<td>CefSharp, cef.redist, Newtonsoft.Json</td>
+</tr>
+<tr>
+<td><code>cashdro.csproj</code> / <code>.sln</code></td>
+<td>Proyecto y solución de Visual Studio</td>
+</tr>
+</tbody>
+</table>
+<h3 id="53-decisiones-estructurales">5.3 Decisiones estructurales</h3>
+<ul>
+<li><strong>Todo síncrono.</strong> No hay <code>async</code>; las llamadas bloquean el hilo de interfaz. Simple de
+  leer, malo para la experiencia cuando hay muchas máquinas.</li>
+<li><strong>Un solo formulario.</strong> El visor web se abre como diálogo modal, no como pestaña.</li>
+<li><strong>Configuración embebida.</strong> Cadena de conexión, ruta de imágenes, moneda y credenciales
+  están en el código.</li>
+<li><strong>Persistencia por SP.</strong> La base define el contrato de escritura; la aplicación solo
+  envía parámetros.</li>
+</ul>
+<hr/>
+<h2 id="6-flujo-de-una-sesion">6. Flujo de una sesión</h2>
+<p><img alt="Flujo de una sesión" loading="lazy" src="rich/flujo-sesion.svg"/></p>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;">#</th>
+<th>Paso</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;">1</td>
+<td>Arranque</td>
+<td><code>Form1_Load</code> ejecuta <code>LeerParametros()</code> y arma el timer</td>
+</tr>
+<tr>
+<td style="text-align: right;">2</td>
+<td>Login</td>
+<td><code>ValidaUsuario</code> consulta la tabla <code>[user]</code></td>
+</tr>
+<tr>
+<td style="text-align: right;">3</td>
+<td>Parque</td>
+<td><code>getCasdro</code> trae <code>id</code>, <code>ip</code>, <code>alias</code>; <code>getError()</code> pinta el semáforo</td>
+</tr>
+<tr>
+<td style="text-align: right;">4</td>
+<td>Selección</td>
+<td>Clic en la columna ESTADO → dos consultas</td>
+</tr>
+<tr>
+<td style="text-align: right;">5</td>
+<td>Diagnóstico</td>
+<td><code>getDiagnosis</code> → dispositivos</td>
+</tr>
+<tr>
+<td style="text-align: right;">6</td>
+<td>Niveles</td>
+<td><code>getPiecesCurrency</code> → denominaciones</td>
+</tr>
+<tr>
+<td style="text-align: right;">7</td>
+<td>Evaluación</td>
+<td><code>LevelRecycler &lt; DepositLevel</code> → alerta</td>
+</tr>
+<tr>
+<td style="text-align: right;">8</td>
+<td>Persistencia</td>
+<td>Timer → <code>pInsertDevices</code> + <code>pInsertdata</code> por equipo</td>
+</tr>
+</tbody>
+</table>
+<p>Los pasos 4 a 7 son manuales. El paso 8 corre solo. La consecuencia práctica es que el
+histórico se construye <strong>aunque nadie mire la pantalla</strong>, pero el detalle por dispositivo
+solo se ve cuando alguien lo pide.</p>
+<hr/>
+<h2 id="7-conexion-con-cashdro">7. Conexión con CashDro</h2>
+<h3 id="71-anatomia-de-las-url">7.1 Anatomía de las URL</h3>
+<pre><code class="language-text">https://&lt;IP_EQUIPO&gt;/Cashdro3WS/index.php?operation=getDiagnosis
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">03 — Cómo se usa</div><h2>De la carpeta a la práctica.</h2></div>
-  <div class="timeline"><div class="step reveal"><div class="step-n">01</div><h4>Abrí la solución</h4><p>Cargá `cashdro.sln` en Visual Studio.</p></div><div class="step reveal"><div class="step-n">02</div><h4>Configurá la conexión</h4><p>Usá las variables/placeholder de host y credenciales.</p></div><div class="step reveal"><div class="step-n">03</div><h4>Compilá</h4><p>Restaurá paquetes y compilá para Windows.</p></div><div class="step reveal"><div class="step-n">04</div><h4>Consultá</h4><p>Ejecutá y leé los parámetros en la interfaz.</p></div></div>
-</div></section>
+https://&lt;IP_EQUIPO&gt;/Cashdro3WS/index.php
+        ?operation=getPiecesCurrency
+        &amp;currencyId=CLP
+        &amp;includeImages=0
+        &amp;includeLevels=1
+        &amp;name=USUARIO_CASHDRO
+        &amp;password=CLAVE_CASHDRO
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Elemento</th>
+<th>Valor</th>
+<th>Nota</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Esquema</td>
+<td><code>https</code></td>
+<td>El equipo sirve TLS con certificado propio</td>
+</tr>
+<tr>
+<td>Host</td>
+<td>IP del equipo</td>
+<td>No hay descubrimiento: la IP viene de SQL</td>
+</tr>
+<tr>
+<td>Ruta</td>
+<td><code>/Cashdro3WS/index.php</code></td>
+<td>Endpoint del servicio</td>
+</tr>
+<tr>
+<td>Operación</td>
+<td><code>getDiagnosis</code> / <code>getPiecesCurrency</code></td>
+<td>Selector tipo RPC</td>
+</tr>
+<tr>
+<td>Moneda</td>
+<td><code>CLP</code></td>
+<td>Fija en el código</td>
+</tr>
+<tr>
+<td>Imágenes</td>
+<td><code>includeImages=0</code></td>
+<td>Evita transferir base64 innecesario</td>
+</tr>
+<tr>
+<td>Niveles</td>
+<td><code>includeLevels=1</code></td>
+<td>Necesario para fianza, total y recuento</td>
+</tr>
+</tbody>
+</table>
+<p>La consola web vive en otra ruta: <code>https://&lt;IP_EQUIPO&gt;/Cashdro3Web/#/diagnosis</code>. Es una
+aplicación de una sola página que el visor CEF carga con las credenciales también en la
+URL.</p>
+<h3 id="72-comportamiento-tls">7.2 Comportamiento TLS</h3>
+<p>En <code>Form1()</code>:</p>
+<pre><code class="language-csharp">CefSettings settings = new CefSettings();
+settings.IgnoreCertificateErrors = true;
+Cef.Initialize(settings);
+</code></pre>
+<p>Y en cada método HTTP:</p>
+<pre><code class="language-csharp">ServicePointManager.ServerCertificateValidationCallback = delegate { return true; };
+</code></pre>
+<p>Es decir: <strong>se acepta cualquier certificado, de cualquier host, durante toda la vida del
+proceso</strong>. Funciona, pero anula la única defensa contra un intermediario en la LAN. La
+alternativa correcta es instalar el certificado del equipo en el almacén de confianza de
+Windows y dejar la validación activa (§17.3).</p>
+<h3 id="73-que-pasa-si-el-equipo-no-responde">7.3 Qué pasa si el equipo no responde</h3>
+<p><code>getError()</code> captura cualquier excepción y devuelve <code>true</code>. El semáforo queda en ⚠ y la
+máquina se considera con falla. Es un criterio <strong>conservador y correcto</strong> para monitoreo,
+pero impide distinguir entre:</p>
+<ul>
+<li>equipo apagado,</li>
+<li>equipo con un dispositivo en falla,</li>
+<li>error de credenciales,</li>
+<li>cambio de contrato en el JSON.</li>
+</ul>
+<p>Para distinguirlos hace falta registro (§16.3).</p>
+<hr/>
+<h2 id="8-parametros-leidos">8. Parámetros leídos</h2>
+<h3 id="81-diagnostico-getdiagnosis">8.1 Diagnóstico — <code>getDiagnosis</code></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo JSON</th>
+<th>Significado operativo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Devices[].deviceId</code></td>
+<td>object</td>
+<td>Identificador del dispositivo (columna Item)</td>
+</tr>
+<tr>
+<td><code>Devices[].deviceName</code></td>
+<td>string</td>
+<td>Nombre lógico (columna Nombre)</td>
+</tr>
+<tr>
+<td><code>Devices[].deviceWithError</code></td>
+<td>bool</td>
+<td>Falla reportada (columna Error?)</td>
+</tr>
+</tbody>
+</table>
+<p>La respuesta trae además <code>code</code>, <code>data.WithError</code>, <code>deviceType</code>, <code>deviceState</code>,
+<code>deviceModel</code>, <code>portName</code>, <code>portProtocol</code>, <code>portState</code>, <code>ip</code>, <code>tooManyChanges</code>,
+<code>deviceMessagesInfo</code> y <code>portMessagesInfo</code>. Se deserializan y se descartan: <strong>hay
+información de diagnóstico disponible que la interfaz no muestra</strong> (modelo, estado del
+puerto, mensajes). Es la extensión más rentable del proyecto.</p>
+<h3 id="82-niveles-getpiecescurrency">8.2 Niveles — <code>getPiecesCurrency</code></h3>
+<table>
+<thead>
+<tr>
+<th>Campo</th>
+<th>Tipo JSON</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CurrencyId</code></td>
+<td>string</td>
+<td>Moneda (<code>CLP</code>)</td>
+</tr>
+<tr>
+<td><code>Value</code></td>
+<td>string</td>
+<td>Valor facial <strong>en centavos</strong></td>
+</tr>
+<tr>
+<td><code>DepositLevel</code></td>
+<td>string</td>
+<td>Fianza: mínimo tolerado</td>
+</tr>
+<tr>
+<td><code>LevelRecycler</code></td>
+<td>object</td>
+<td>Nivel actual del recirculador</td>
+</tr>
+<tr>
+<td><code>MaxLevel</code></td>
+<td>string</td>
+<td>Capacidad máxima</td>
+</tr>
+</tbody>
+</table>
+<p>Se ignoran <code>code</code>, <code>MinLevel</code>, <code>MaxLevelTemp</code>, <code>DepositLevelTemp</code>, <code>Type</code>,
+<code>Destination</code>, <code>MaxPiecesExchange</code>, <code>MaxPiecesChange</code>, <code>MaxPiecesCancel</code>,
+<code>IsChargeable</code>, <code>State</code>, <code>Image</code> y <code>LevelCasete</code>. El diccionario completo, campo por
+campo, está en <a href="https://github.com/jmadasme/cashdro-params/blob/main/datasheet.md"><code>docs/datasheet.md</code></a>.</p>
+<h3 id="83-conversion-de-valores">8.3 Conversión de valores</h3>
+<p><code>Value</code> llega en centavos y se muestra dividido por 100:</p>
+<pre><code class="language-csharp">string numero = d.Value.ToString();
+dataGridViewdata.Rows[n].Cells[1].Value = Convert.ToUInt32(numero) / 100;
+</code></pre>
+<table>
+<thead>
+<tr>
+<th style="text-align: right;"><code>Value</code> recibido</th>
+<th style="text-align: right;">Mostrado</th>
+<th>Denominación real</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: right;"><code>1000</code></td>
+<td style="text-align: right;">10</td>
+<td>$10</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>5000</code></td>
+<td style="text-align: right;">50</td>
+<td>$50</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>10000</code></td>
+<td style="text-align: right;">100</td>
+<td>$100</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>50000</code></td>
+<td style="text-align: right;">500</td>
+<td>$500</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>100000</code></td>
+<td style="text-align: right;">1000</td>
+<td>$1 000</td>
+</tr>
+<tr>
+<td style="text-align: right;"><code>200000</code></td>
+<td style="text-align: right;">2000</td>
+<td>$2 000</td>
+</tr>
+</tbody>
+</table>
+<p>Como <code>CLP</code> no usa decimales, la división entera alcanza. Si algún día se habilita una
+moneda con centavos reales, hay que cambiar la presentación y la comparación.</p>
+<hr/>
+<h2 id="9-modelo-de-niveles">9. Modelo de niveles</h2>
+<p><img alt="Modelo de niveles" loading="lazy" src="rich/modelo-niveles.svg"/></p>
+<p>Cada denominación tiene tres referencias y una regla:</p>
+<pre><code class="language-csharp">int depositlevel  = Convert.ToInt32(d.DepositLevel);   // mínimo tolerado
+int levelrecycler = Convert.ToInt32(d.LevelRecycler);  // nivel actual
 
-<section class="section tight"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">04 — Decisiones</div><h2>Lo que lo hace distinto</h2></div>
-  <div class="features"><div class="feature reveal"><h4>WinForms</h4><p>Interfaz de escritorio directa, sin navegador.</p></div><div class="feature reveal"><h4>Consulta HTTPS</h4><p>Habla con la API de la máquina.</p></div><div class="feature reveal"><h4>Parámetros técnicos</h4><p>Configuración, estado y datos financieros.</p></div><div class="feature reveal"><h4>Código legible</h4><p>Formularios y clases separadas.</p></div><div class="feature reveal"><h4>Configuración externa</h4><p>Sin credenciales hardcodeadas en la versión publicada.</p></div><div class="feature reveal"><h4>Alcance claro</h4><p>Herramienta de lectura, no de operación transaccional.</p></div></div>
-</div></section>
+if (levelrecycler &lt; depositlevel)
+    // alerta: warning.png
+else
+    // normal: check-icon.png
+</code></pre>
+<table>
+<thead>
+<tr>
+<th>Columna en pantalla</th>
+<th>Campo</th>
+<th>Qué mirar</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Fianza</strong></td>
+<td><code>DepositLevel</code></td>
+<td>Umbral configurado en la máquina</td>
+</tr>
+<tr>
+<td><strong>Total</strong></td>
+<td><code>LevelRecycler</code></td>
+<td>Piezas disponibles ahora</td>
+</tr>
+<tr>
+<td><strong>Recuento</strong></td>
+<td><code>MaxLevel</code></td>
+<td>Tope físico; <strong>no</strong> participa de la alerta</td>
+</tr>
+</tbody>
+</table>
+<p>La alerta es <strong>por denominación</strong>, no por equipo: un equipo puede estar en verde de forma
+global y tener una denominación en alerta. <code>picOk</code> (el semáforo grande) resume el parque
+completo, no la fila seleccionada.</p>
+<h3 id="91-por-que-la-alerta-usa-y-no">9.1 Por qué la alerta usa <code>&lt;</code> y no <code>&lt;=</code></h3>
+<p>Con <code>Total == Fianza</code> la denominación se considera operativa. Si tu política interna exige
+mantener un colchón por sobre el mínimo, el umbral debe configurarse más alto en la
+máquina, no en la aplicación: la app compara contra lo que el equipo declara.</p>
+<hr/>
+<h2 id="10-persistencia-en-sql-server">10. Persistencia en SQL Server</h2>
+<h3 id="101-objetos-que-la-aplicacion-espera">10.1 Objetos que la aplicación espera</h3>
+<table>
+<thead>
+<tr>
+<th>Objeto</th>
+<th>Tipo</th>
+<th>Entradas</th>
+<th>Devuelve / efecto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>GetParametros</code></td>
+<td>SP</td>
+<td>—</td>
+<td><code>CorreoFrom</code>, <code>CorreoPass</code>, <code>Cliente</code></td>
+</tr>
+<tr>
+<td><code>getCasdro</code></td>
+<td>SP</td>
+<td>—</td>
+<td><code>id</code>, <code>ip</code>, <code>alias</code>, <code>correoAlerta</code></td>
+</tr>
+<tr>
+<td><code>[user]</code></td>
+<td>tabla</td>
+<td><code>usuario</code>, <code>pass</code></td>
+<td>Conteo para el login</td>
+</tr>
+<tr>
+<td><code>pInsertDevices</code></td>
+<td>SP</td>
+<td><code>@cliente</code>, <code>@deviceName</code>, <code>@deviceWithError</code>, <code>@IP</code></td>
+<td>Inserta estado técnico</td>
+</tr>
+<tr>
+<td><code>pInsertdata</code></td>
+<td>SP</td>
+<td><code>@cliente</code>, <code>@currencyId</code>, <code>@Value</code>, <code>@depositLevel</code>, <code>@LevelRecycler</code>, <code>@IP</code>, <code>@MaxLevel</code></td>
+<td>Inserta niveles</td>
+</tr>
+</tbody>
+</table>
+<p>La base se llama <code>GestionCashdro</code>. <strong>No se incluye</strong> en el repositorio: hay que crearla o
+restaurarla desde el respaldo corporativo.</p>
+<h3 id="102-esquema-minimo-para-un-laboratorio">10.2 Esquema mínimo para un laboratorio</h3>
+<p>La base necesita cinco objetos:</p>
+<table>
+<thead>
+<tr>
+<th>Objeto</th>
+<th>Columnas imprescindibles</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>[user]</code></td>
+<td><code>usuario</code>, <code>pass</code></td>
+</tr>
+<tr>
+<td><code>Parametros</code></td>
+<td><code>CorreoFrom</code>, <code>CorreoPass</code>, <code>Cliente</code></td>
+</tr>
+<tr>
+<td><code>Maquinas</code></td>
+<td><code>id</code>, <code>ip</code>, <code>alias</code>, <code>correoAlerta</code></td>
+</tr>
+<tr>
+<td><code>Devices</code></td>
+<td><code>cliente</code>, <code>deviceName</code>, <code>deviceWithError</code>, <code>ip</code>, fecha de lectura</td>
+</tr>
+<tr>
+<td><code>Niveles</code></td>
+<td><code>cliente</code>, <code>currencyId</code>, <code>Value</code>, <code>depositLevel</code>, <code>levelRecycler</code>, <code>maxLevel</code>, <code>ip</code>, fecha de lectura</td>
+</tr>
+</tbody>
+</table>
+<p>El DDL completo, listo para ejecutar, está en
+<a href="https://github.com/jmadasme/cashdro-params/blob/main/developer.md"><code>docs/developer.md</code></a> (§6.2). <code>[user]</code> va entre corchetes porque
+<code>USER</code> es palabra reservada en T-SQL.</p>
+<h3 id="103-costo-del-barrido">10.3 Costo del barrido</h3>
+<p>Cada tick abre una conexión por fila insertada. Con 20 equipos, 6 dispositivos y 8
+denominaciones:</p>
+<pre><code class="language-text">20 × (6 + 8) = 280 conexiones y 280 comandos por tick
+280 × 48 ticks/día ≈ 13 440 inserciones diarias
+</code></pre>
+<p>Es suficiente para un tablero, pero conviene agrupar en una transacción y reutilizar la
+conexión; el patrón está descrito en
+<a href="https://github.com/jmadasme/cashdro-params/blob/main/developer.md"><code>docs/developer.md</code></a>.</p>
+<h3 id="104-consultas-utiles-sobre-el-historico">10.4 Consultas útiles sobre el histórico</h3>
+<pre><code class="language-sql">-- Último estado conocido por equipo
+SELECT ip, deviceName, deviceWithError, MAX(leido) AS visto
+FROM Devices
+GROUP BY ip, deviceName, deviceWithError
+ORDER BY visto DESC;
 
-<section class="section tight" id="stack"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">05 — Stack y arranque</div><h2>Con qué está construido</h2></div>
-  <div class="stack-grid">
-    <div class="reveal"><div class="chips"><span class="chip">C#</span><span class="chip">.NET Framework</span><span class="chip">WinForms</span><span class="chip">Visual Studio</span><span class="chip">HTTPS</span></div><div class="note"><svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3z"/></svg><span>Es Windows-only. No se probó contra una máquina real en esta revisión.</span></div></div>
-    <div class="terminal reveal"><div class="terminal-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span></div><pre>git clone https://github.com/jmadasme/cashdro-params.git
-# Abrí versions/Lectura-parametros-maquina-Cashdro/cashdro.sln
-# Configurá host y credenciales
-# Compilá y ejecutá en Windows</pre></div>
-  </div>
-</div></section>
+-- Denominaciones que estuvieron bajo fianza en las últimas 24 horas
+SELECT ip, currencyId, Value, levelRecycler, depositLevel, leido
+FROM Niveles
+WHERE leido &gt;= DATEADD(HOUR, -24, GETDATE())
+  AND TRY_CONVERT(INT, levelRecycler) &lt; TRY_CONVERT(INT, depositLevel)
+ORDER BY leido DESC;
 
-<section class="section tight" id="docs"><div class="wrap">
-  <div class="section-head reveal"><div class="kicker">06 — Documentación</div><h2>Para usar y para entender.</h2><p class="section-sub">Cada documento está en el repositorio, versionado junto al código.</p></div>
-  <div class="docs"><a class="doc reveal" href="https://github.com/jmadasme/cashdro-params/blob/main/docs/datasheet.md" target="_blank" rel="noopener"><span class="tag">DATASHEET</span><h4>Manual de operación</h4><p>Instalación, uso, configuración y troubleshooting.</p></a><a class="doc reveal" href="https://github.com/jmadasme/cashdro-params/blob/main/docs/developer.md" target="_blank" rel="noopener"><span class="tag">DEVELOPER</span><h4>Guía de código</h4><p>Arquitectura, módulos, contratos y extensión.</p></a><a class="doc reveal" href="https://github.com/jmadasme/cashdro-params/blob/main/docs/REFERENCES.md" target="_blank" rel="noopener"><span class="tag">REFERENCES</span><h4>Referencias</h4><p>Fuentes oficiales y documentación de las tecnologías.</p></a></div>
-</div></section>
+-- Equipos que dejaron de reportar
+SELECT ip, MAX(leido) AS ultimo
+FROM Devices
+GROUP BY ip
+HAVING MAX(leido) &lt; DATEADD(HOUR, -2, GETDATE());
+</code></pre>
+<hr/>
+<h2 id="11-configuracion">11. Configuración</h2>
+<p>No hay archivo de configuración funcional: todo está en el código. Estos son los puntos
+que hay que tocar antes de compilar o desplegar.</p>
+<table>
+<thead>
+<tr>
+<th>Qué</th>
+<th>Dónde</th>
+<th>Valor en el repositorio</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Cadena de conexión SQL</td>
+<td><code>Form1.cs</code>, campo <code>_cnLocal</code>; <code>funciones.cs</code>, campo <code>cnLocal</code></td>
+<td><code>Data Source=&lt;SERVIDOR&gt;;Initial Catalog=GestionCashdro;User Id=USUARIO_CASHDRO;Password=CLAVE_CASHDRO</code></td>
+</tr>
+<tr>
+<td>Ruta de iconos</td>
+<td><code>Form1.cs</code>, campo <code>pathImg</code></td>
+<td><code>D:\imagenes\</code></td>
+</tr>
+<tr>
+<td>Moneda</td>
+<td><code>cargaGridData</code> / <code>cargaTblData</code></td>
+<td><code>CLP</code></td>
+</tr>
+<tr>
+<td>Intervalo del timer</td>
+<td><code>Form1_Load</code></td>
+<td><code>1 800 000</code> ms</td>
+</tr>
+<tr>
+<td>Servidor SMTP</td>
+<td><code>enviaCorreo</code></td>
+<td><code>smtp.gmail.com</code>, puerto 587, SSL</td>
+</tr>
+<tr>
+<td>Destinatario de alertas</td>
+<td><code>getCasdro</code> → <code>correoAlerta</code></td>
+<td>Por equipo</td>
+</tr>
+<tr>
+<td>Remitente y clave</td>
+<td><code>GetParametros</code> → <code>CorreoFrom</code>, <code>CorreoPass</code></td>
+<td>En base de datos</td>
+</tr>
+<tr>
+<td>Credenciales CashDro</td>
+<td>URL de <code>getPiecesCurrency</code> y del visor</td>
+<td><code>USUARIO_CASHDRO</code> / <code>CLAVE_CASHDRO</code> (marcadores)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="111-cadena-de-conexion">11.1 Cadena de conexión</h3>
+<pre><code class="language-text">Data Source=&lt;SERVIDOR&gt;\&lt;INSTANCIA&gt;;Initial Catalog=GestionCashdro;
+User Id=&lt;USUARIO&gt;;Password=&lt;CLAVE&gt;;Connect Timeout=5
+</code></pre>
+<p>Se usa autenticación SQL (usuario y clave en la cadena), no autenticación integrada de
+Windows. La cadena está duplicada en dos archivos; si la cambias, cámbiala en ambos
+(aunque <code>funciones.cs</code> no se use, deja una copia de las credenciales en el binario).</p>
+<h3 id="112-archivos-que-deben-existir-en-el-puesto">11.2 Archivos que deben existir en el puesto</h3>
+<table>
+<thead>
+<tr>
+<th>Archivo</th>
+<th>Ruta</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>warning.png</code></td>
+<td><code>D:\imagenes\warning.png</code></td>
+<td>Icono de alerta</td>
+</tr>
+<tr>
+<td><code>check-icon.png</code></td>
+<td><code>D:\imagenes\check-icon.png</code></td>
+<td>Icono correcto</td>
+</tr>
+<tr>
+<td><code>libcef.dll</code> y recursos</td>
+<td>junto al <code>.exe</code></td>
+<td>Los copia NuGet al compilar</td>
+</tr>
+<tr>
+<td><code>Newtonsoft.Json.dll</code></td>
+<td>junto al <code>.exe</code></td>
+<td>Ídem</td>
+</tr>
+</tbody>
+</table>
+<p>Los dos PNG <strong>no</strong> están en el repositorio. Cualquier icono cuadrado de 16 × 16 o mayor
+sirve; el <code>PictureBox</code> los escala con <code>StretchImage</code>.</p>
+<hr/>
+<h2 id="12-compilacion">12. Compilación</h2>
+<h3 id="121-requisitos">12.1 Requisitos</h3>
+<table>
+<thead>
+<tr>
+<th>Herramienta</th>
+<th>Versión</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Windows</td>
+<td>7 SP1 o superior</td>
+</tr>
+<tr>
+<td>Visual Studio</td>
+<td>2017 o superior con cargas ".NET desktop development"</td>
+</tr>
+<tr>
+<td>.NET Framework</td>
+<td>4.6.1 Developer Pack</td>
+</tr>
+<tr>
+<td>NuGet</td>
+<td>4.x o superior (o el integrado en VS)</td>
+</tr>
+<tr>
+<td>Visual C++ Redistributable</td>
+<td>2015-2022 (para <code>libcef.dll</code>)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="122-disposicion-del-arbol">12.2 Disposición del árbol</h3>
+<p>Los <code>HintPath</code> del proyecto apuntan a <code>..\packages\</code>, y la solución espera el proyecto en
+una subcarpeta <code>cashdro\</code>:</p>
+<pre><code class="language-text">&lt;raiz&gt;\
+├── cashdro.sln
+├── packages\                      ← restaurado por NuGet
+└── cashdro\                       ← contenido de versions/Lectura-parametros-maquina-Cashdro
+    ├── cashdro.csproj
+    ├── Form1.cs
+    └── ...
+</code></pre>
+<p>Si abres la carpeta de la versión tal cual, la solución no encontrará el proyecto.
+Reproduce esta estructura o edita las rutas relativas.</p>
+<h3 id="123-pasos">12.3 Pasos</h3>
+<pre><code class="language-powershell"># 1. Restaurar dependencias
+nuget restore cashdro.sln
 
+# 2. Compilar
+msbuild cashdro.sln /p:Configuration=Release /p:Platform="Any CPU"
+
+# 3. Verificar la salida
+dir cashdro\bin\Release\cashdro.exe
+</code></pre>
+<p>Desde Visual Studio:</p>
+<ol>
+<li>Abrir <code>cashdro.sln</code>.</li>
+<li>Clic derecho en la solución → <strong>Restore NuGet Packages</strong>.</li>
+<li>Elegir <code>Release</code> y <code>Any CPU</code> (o <code>x86</code>).</li>
+<li><strong>Build → Build Solution</strong> (<code>Ctrl+Shift+B</code>).</li>
+</ol>
+<h3 id="124-archivos-que-faltan-y-hay-que-recrear">12.4 Archivos que faltan y hay que recrear</h3>
+<p>El <code>.csproj</code> referencia archivos que no están en la carpeta:</p>
+<table>
+<thead>
+<tr>
+<th>Referencia</th>
+<th>Estado</th>
+<th>Acción</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Properties\AssemblyInfo.cs</code></td>
+<td>Ausente</td>
+<td>Recrear con los atributos de ensamblado o quitar del <code>.csproj</code></td>
+</tr>
+<tr>
+<td><code>Properties\Resources.resx</code> + <code>.Designer.cs</code></td>
+<td>Ausentes</td>
+<td>Recrear o quitar</td>
+</tr>
+<tr>
+<td><code>Properties\Settings.settings</code> + <code>.Designer.cs</code></td>
+<td>Ausentes</td>
+<td>Recrear o quitar</td>
+</tr>
+<tr>
+<td><code>packages\</code></td>
+<td>Ausente</td>
+<td><code>nuget restore</code></td>
+</tr>
+<tr>
+<td><code>DevComponents.DotNetBar2</code> 14.1.0.18</td>
+<td>Ausente</td>
+<td>Instalar el componente o cambiar la clase base de <code>webBrownser</code></td>
+</tr>
+</tbody>
+</table>
+<p>Contenido mínimo de <code>AssemblyInfo.cs</code> para poder compilar:</p>
+<pre><code class="language-csharp">using System.Reflection;
+using System.Runtime.InteropServices;
+
+[assembly: AssemblyTitle("cashdro")]
+[assembly: ComVisible(false)]
+[assembly: Guid("5a6b30c5-8693-4d75-9326-c19c11d3d5af")]
+[assembly: AssemblyVersion("1.0.0.0")]
+</code></pre>
+<h3 id="125-any-cpu-o-x86">12.5 Any CPU o x86</h3>
+<p><code>CefSharpAnyCpuSupport=true</code> está activo en la configuración principal y en
+<code>Release|AnyCPU</code>. Eso hace que CEF arranque un proceso hijo con la arquitectura correcta.
+Si el puesto es de 32 bits, compila en <code>x86</code> y usa <code>cef.redist.x86</code>. Mezclar arquitecturas
+produce <code>BadImageFormatException</code> al inicializar CEF, no al compilar.</p>
+<h3 id="126-errores-de-compilacion-frecuentes">12.6 Errores de compilación frecuentes</h3>
+<table>
+<thead>
+<tr>
+<th>Error</th>
+<th>Causa</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>CefSharp could not be found</code></td>
+<td>Paquetes sin restaurar</td>
+<td><code>nuget restore</code></td>
+</tr>
+<tr>
+<td><code>DevComponents could not be found</code></td>
+<td>Falta DotNetBar</td>
+<td>Instalar componente o cambiar base a <code>Form</code></td>
+</tr>
+<tr>
+<td><code>Source file 'Properties\AssemblyInfo.cs' could not be found</code></td>
+<td>Archivo ausente</td>
+<td>Recrearlo (§12.4)</td>
+</tr>
+<tr>
+<td><code>missing file is ..\packages\cef.redist...props</code></td>
+<td>Restauración incompleta</td>
+<td>Borrar <code>obj\</code>, restaurar de nuevo</td>
+</tr>
+<tr>
+<td><code>The OutputPath property is not set</code></td>
+<td>Configuración/plataforma inexistente</td>
+<td>Usar <code>Any CPU</code> o <code>x86</code></td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="13-operacion">13. Operación</h2>
+<h3 id="131-arranque">13.1 Arranque</h3>
+<ol>
+<li>Ejecuta <code>cashdro.exe</code>.</li>
+<li>La aplicación inicializa CEF y lee parámetros desde SQL.</li>
+<li>Espera el login.</li>
+</ol>
+<p>Si la base no responde, la ventana abre igual pero sin datos y el login no funciona: la
+validación de usuario también consulta SQL.</p>
+<h3 id="132-login">13.2 Login</h3>
+<p>Introduce el <strong>usuario local</strong> (tabla <code>[user]</code>), no el de CashDro. La clave se enmascara
+con <code>*</code>. Al pulsar <code>validar</code>:</p>
+<ul>
+<li>coincidencia exacta → se carga el parque;</li>
+<li>sin coincidencia → <code>YOU ARE NOT GRANTED WITH ACCESS</code> y los campos se limpian.</li>
+</ul>
+<h3 id="133-lectura-del-parque">13.3 Lectura del parque</h3>
+<table>
+<thead>
+<tr>
+<th>Icono</th>
+<th>Significado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>✓</td>
+<td>Todos los dispositivos sin error</td>
+</tr>
+<tr>
+<td>⚠</td>
+<td>Al menos un dispositivo con error, o equipo inaccesible</td>
+</tr>
+</tbody>
+</table>
+<p>La etiqueta <code>lblMensaje</code> muestra <code>Conectando con &lt;IP&gt;......</code> mientras recorre. Es el único
+indicador de progreso.</p>
+<h3 id="134-detalle-por-equipo">13.4 Detalle por equipo</h3>
+<p>Haz clic en la celda de la columna <strong>ESTADO</strong>. Se llenan las dos grillas de la derecha.</p>
+<blockquote>
+<p>Si la fila está en ⚠, la celda es de solo lectura y el clic <strong>no</strong> abre el detalle. Es
+una limitación conocida: para revisar una máquina en falla hay que usar la consola del
+fabricante.</p>
+</blockquote>
+<h3 id="135-consola-web-embebida">13.5 Consola web embebida</h3>
+<p>Un clic en la columna <strong>STATUS</strong> de la grilla de dispositivos abre una ventana titulada
+<code>Diagnosis</code> con el navegador Chromium apuntando a la consola del equipo. Es la vista
+completa del fabricante: permite ver mensajes, modelos y estados que la API entrega pero
+la aplicación descarta.</p>
+<h3 id="136-monitoreo-automatico">13.6 Monitoreo automático</h3>
+<p>No requiere acción. Cada 30 minutos:</p>
+<pre><code class="language-text">getCasdro → por cada equipo → getDiagnosis → pInsertDevices
+                            → getPiecesCurrency → pInsertdata
+</code></pre>
+<p>Durante el barrido la interfaz puede congelarse. Además, el barrido <strong>limpia la grilla
+visible del parque</strong> y no la vuelve a llenar: pasados los 30 minutos, la lista de equipos
+aparece vacía hasta que se vuelva a validar el usuario. Es un defecto conocido y está
+listado en §18.</p>
+<hr/>
+<h2 id="14-ejemplos-de-uso">14. Ejemplos de uso</h2>
+<h3 id="141-consultar-el-diagnostico-con-powershell">14.1 Consultar el diagnóstico con PowerShell</h3>
+<p>Útil para verificar conectividad antes de abrir la aplicación:</p>
+<pre><code class="language-powershell">$equipo = "&lt;IP_EQUIPO&gt;"
+
+# PowerShell 7+
+$diag = Invoke-RestMethod -Uri "https://$equipo/Cashdro3WS/index.php?operation=getDiagnosis" `
+                           -SkipCertificateCheck
+
+$diag.code
+$diag.data.WithError
+$diag.data.Devices | Select-Object deviceId, deviceName, deviceWithError | Format-Table
+</code></pre>
+<p>Con Windows PowerShell 5.1 hay que aceptar el certificado manualmente:</p>
+<pre><code class="language-powershell">[System.Net.ServicePointManager]::ServerCertificateValidationCallback = { $true }
+$diag = Invoke-RestMethod -Uri "https://$equipo/Cashdro3WS/index.php?operation=getDiagnosis"
+</code></pre>
+<h3 id="142-consultar-niveles-con-powershell">14.2 Consultar niveles con PowerShell</h3>
+<pre><code class="language-powershell">$equipo = "&lt;IP_EQUIPO&gt;"
+$url = "https://$equipo/Cashdro3WS/index.php?operation=getPiecesCurrency" +
+       "&amp;currencyId=CLP&amp;includeImages=0&amp;includeLevels=1" +
+       "&amp;name=USUARIO_CASHDRO&amp;password=CLAVE_CASHDRO"
+
+$niveles = Invoke-RestMethod -Uri $url -SkipCertificateCheck
+
+$niveles.data |
+    Select-Object CurrencyId,
+                  @{n='Denominacion'; e={ [int]$_.Value / 100 }},
+                  @{n='Fianza';       e={ [int]$_.DepositLevel }},
+                  @{n='Total';        e={ [int]$_.LevelRecycler }},
+                  @{n='Recuento';     e={ [int]$_.MaxLevel }},
+                  @{n='Alerta';       e={ [int]$_.LevelRecycler -lt [int]$_.DepositLevel }} |
+    Sort-Object Denominacion |
+    Format-Table
+</code></pre>
+<h3 id="143-cliente-c-minimo-para-integrar-en-otro-sistema">14.3 Cliente C# mínimo para integrar en otro sistema</h3>
+<p>Este fragmento no forma parte del proyecto: muestra cómo reutilizar el mismo contrato
+desde otra aplicación, con timeout y validación de <code>code</code>. Usa las mismas clases de
+<code>dataClass.cs</code>.</p>
+<pre><code class="language-csharp">private static readonly HttpClient Http = new HttpClient
+{
+    Timeout = TimeSpan.FromSeconds(10)
+};
+
+public static List&lt;Device&gt; GetDiagnosis(string ip)
+{
+    string url = $"https://{ip}/Cashdro3WS/index.php?operation=getDiagnosis";
+    string json = Http.GetStringAsync(url).GetAwaiter().GetResult();
+
+    var root = JsonConvert.DeserializeObject&lt;RootObjectDevice&gt;(json);
+    if (root == null || root.code != 0 || root.data?.Devices == null)
+        throw new InvalidOperationException($"Respuesta inválida. code={root?.code}");
+
+    return root.data.Devices;
+}
+</code></pre>
+<blockquote>
+<p>El <code>HttpClient</code> de este ejemplo <strong>sí</strong> valida el certificado. Para un equipo con
+certificado autofirmado, registra el certificado en el almacén de Windows en lugar de
+desactivar la validación.</p>
+</blockquote>
+<hr/>
+<h2 id="15-ajuste-de-umbrales">15. Ajuste de umbrales</h2>
+<p>La aplicación <strong>no calibra</strong> nada: no hay sensor que calibrar. Lo que sí existe es un
+umbral operativo, la <strong>fianza</strong> (<code>DepositLevel</code>), que se configura en la máquina y la
+aplicación solo compara.</p>
+<table>
+<thead>
+<tr>
+<th>Quiero…</th>
+<th>Dónde se cambia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Que la alerta salte antes</td>
+<td>Subir <code>DepositLevel</code> en la configuración de la máquina</td>
+</tr>
+<tr>
+<td>Que no moleste por denominaciones poco usadas</td>
+<td>Bajar <code>DepositLevel</code> de esa denominación</td>
+</tr>
+<tr>
+<td>Cambiar el intervalo de monitoreo</td>
+<td><code>timer1.Interval</code> en <code>Form1_Load</code></td>
+</tr>
+<tr>
+<td>Cambiar la ruta de iconos</td>
+<td><code>pathImg</code> en <code>Form1.cs</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="151-como-verificar-que-el-umbral-es-el-correcto">15.1 Cómo verificar que el umbral es el correcto</h3>
+<ol>
+<li>Deja la máquina con una denominación justo en la fianza.</li>
+<li>Consulta los niveles: <code>Total</code> debe ser igual a <code>Fianza</code> y la fila debe salir en verde.</li>
+<li>Retira una pieza y vuelve a consultar: debe salir en ⚠.</li>
+<li>Devuélvela y confirma que vuelve a verde.</li>
+</ol>
+<p>Si el paso 2 sale en rojo, revisa que la máquina no esté reportando <code>DepositLevel</code> como
+texto con separadores.</p>
+<hr/>
+<h2 id="16-codigos-de-error-y-diagnostico">16. Códigos de error y diagnóstico</h2>
+<p>La aplicación no define códigos propios: propaga excepciones de .NET y mensajes del
+sistema. Esta tabla normaliza los escenarios observables.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Escenario</th>
+<th>Qué se ve</th>
+<th>Causa</th>
+<th>Solución</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>E01</td>
+<td>SQL inaccesible</td>
+<td>Nada carga; login siempre falla</td>
+<td>Instancia apagada, nombre incorrecto, firewall</td>
+<td>Verificar <code>Data Source</code>, TCP/1433, credenciales</td>
+</tr>
+<tr>
+<td>E02</td>
+<td>Login inválido</td>
+<td><code>YOU ARE NOT GRANTED WITH ACCESS</code></td>
+<td>Usuario/clave no están en <code>[user]</code></td>
+<td>Revisar tabla; la comparación es exacta y distingue mayúsculas según la collation</td>
+</tr>
+<tr>
+<td>E03</td>
+<td>Equipo inaccesible</td>
+<td>Fila en ⚠</td>
+<td><code>getError</code> devuelve <code>true</code> ante cualquier excepción</td>
+<td>Probar ping y TCP/443</td>
+</tr>
+<tr>
+<td>E04</td>
+<td>Certificado no válido</td>
+<td>Conecta igual</td>
+<td>Validación desactivada</td>
+<td>Ninguna acción; es por diseño</td>
+</tr>
+<tr>
+<td>E05</td>
+<td>Faltan iconos</td>
+<td>Excepción al pintar la grilla</td>
+<td>No existe <code>D:\imagenes\</code></td>
+<td>Crear carpeta y copiar los PNG</td>
+</tr>
+<tr>
+<td>E06</td>
+<td>JSON inesperado</td>
+<td>Grilla vacía o excepción</td>
+<td>El endpoint devolvió HTML de error o cambió el contrato</td>
+<td>Ver §16.3</td>
+</tr>
+<tr>
+<td>E07</td>
+<td><code>Value</code> no numérico</td>
+<td>Excepción de conversión</td>
+<td>Cambio de contrato</td>
+<td>Registrar la respuesta y ajustar el parseo</td>
+</tr>
+<tr>
+<td>E08</td>
+<td><code>LevelRecycler</code> nulo</td>
+<td>Excepción al comparar</td>
+<td>Denominación sin recirculador</td>
+<td>Filtrar nulos</td>
+</tr>
+<tr>
+<td>E09</td>
+<td>CEF no inicializa</td>
+<td>El visor no abre; posible cierre</td>
+<td>Falta <code>libcef.dll</code>, arquitectura cruzada, VC++ ausente</td>
+<td>Reinstalar runtime, alinear plataforma</td>
+</tr>
+<tr>
+<td>E10</td>
+<td>SMTP rechaza</td>
+<td><code>MessageBox</code> con el texto del error</td>
+<td>Clave normal en vez de contraseña de aplicación</td>
+<td>Generar contraseña de aplicación</td>
+</tr>
+<tr>
+<td>E11</td>
+<td>Sin histórico</td>
+<td>No hay filas nuevas en SQL</td>
+<td>Permisos de <code>EXECUTE</code> o excepción silenciosa</td>
+<td>Probar los SP a mano</td>
+</tr>
+<tr>
+<td>E12</td>
+<td>Parque vacío tras 30 min</td>
+<td>Grilla sin filas</td>
+<td>El barrido limpia la grilla y no la repuebla</td>
+<td>Volver a validar el usuario; corregir el código</td>
+</tr>
+</tbody>
+</table>
+<h3 id="161-arbol-de-decision">16.1 Árbol de decisión</h3>
+<pre><code class="language-text">¿Abre la ventana?
+├── no → .NET 4.6.1, VC++ Runtime, integridad de bin\
+└── sí
+    ¿Pasa el login?
+    ├── no → SQL Server / tabla [user] / cadena de conexión
+    └── sí
+        ¿Hay filas en el parque?
+        ├── no → getCasdro sin datos o excepción silenciosa
+        └── sí
+            ¿Todas en ⚠?
+            ├── sí → red hacia los equipos / TLS / credenciales
+            └── no
+                ¿Abre el detalle?
+                ├── no → celda ReadOnly (equipo en error) o endpoint cambiado
+                └── sí
+                    ¿Llega el histórico a SQL?
+                    ├── no → permisos de los SP
+                    └── sí → operación normal
+</code></pre>
+<h3 id="162-mensajes-que-la-aplicacion-muestra">16.2 Mensajes que la aplicación muestra</h3>
+<table>
+<thead>
+<tr>
+<th>Texto</th>
+<th>Origen</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>YOU ARE NOT GRANTED WITH ACCESS</code></td>
+<td><code>ValidaUsuario</code></td>
+</tr>
+<tr>
+<td><code>Conectando con &lt;IP&gt;......</code></td>
+<td><code>cargaGrid</code></td>
+</tr>
+<tr>
+<td><code>err: &lt;mensaje&gt;</code></td>
+<td><code>enviaCorreo</code></td>
+</tr>
+<tr>
+<td><code>Diagnosis</code></td>
+<td>Título del visor CEF</td>
+</tr>
+</tbody>
+</table>
+<p>No hay otros mensajes: la mayoría de los fallos se descartan sin avisar. Es la razón
+principal por la que el diagnóstico en sitio es difícil.</p>
+<h3 id="163-instrumentacion-minima-recomendada">16.3 Instrumentación mínima recomendada</h3>
+<p>Antes de depurar a ciegas, agrega registro de la respuesta cruda:</p>
+<pre><code class="language-csharp">var page = sr.ReadToEnd();
+System.IO.File.AppendAllText(
+    @"C:\CashDro\log\ws.log",
+    $"{DateTime.Now:O} {url}\n{page}\n\n");
+</code></pre>
+<p>Nunca registres la URL de niveles completa: lleva credenciales. Recorta el query string o
+guarda solo la IP y la operación.</p>
+<hr/>
+<h2 id="17-seguridad">17. Seguridad</h2>
+<h3 id="171-hallazgos">17.1 Hallazgos</h3>
+<table>
+<thead>
+<tr>
+<th>Severidad</th>
+<th>Hallazgo</th>
+<th>Consecuencia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Alta</td>
+<td>Cadena de conexión y credenciales SQL en el código</td>
+<td>Quien obtenga el <code>.exe</code> accede a la base</td>
+</tr>
+<tr>
+<td>Alta</td>
+<td>Validación de certificado TLS desactivada</td>
+<td>Intercepción trivial en la LAN</td>
+</tr>
+<tr>
+<td>Alta</td>
+<td>Credenciales de CashDro en la query string</td>
+<td>Quedan en logs, proxies e historial</td>
+</tr>
+<tr>
+<td>Media</td>
+<td>Clave de login en texto plano en SQL</td>
+<td>Filtración = cuentas comprometidas</td>
+</tr>
+<tr>
+<td>Media</td>
+<td>Clave SMTP almacenada en la base</td>
+<td>Uso indebido del correo</td>
+</tr>
+<tr>
+<td>Media</td>
+<td>Sin registro de auditoría</td>
+<td>No se puede reconstruir un incidente</td>
+</tr>
+<tr>
+<td>Baja</td>
+<td>Mensajes de error con detalles internos en <code>MessageBox</code></td>
+<td>Divulgación de infraestructura</td>
+</tr>
+</tbody>
+</table>
+<p>Referencias: CWE-798 (credenciales embebidas), CWE-295 (validación de certificado),
+CWE-598 (datos sensibles en GET), CWE-256 (clave en texto plano), CWE-778 (registro
+insuficiente).</p>
+<h3 id="172-modelo-de-amenaza-asumido">17.2 Modelo de amenaza asumido</h3>
+<p>El diseño presupone:</p>
+<ul>
+<li>red administrativa cerrada, sin acceso desde Internet;</li>
+<li>puesto de operación dentro de la misma LAN que las máquinas;</li>
+<li>operadores de confianza.</li>
+</ul>
+<p>Fuera de ese supuesto, los hallazgos pasan de "deuda técnica" a "vulnerabilidad
+explotable". Si el puesto se conecta por VPN, se comparte o se expone, hay que corregir
+§17.3 antes de usarlo.</p>
+<h3 id="173-plan-de-endurecimiento">17.3 Plan de endurecimiento</h3>
+<ol>
+<li><strong>Sacar secretos del código.</strong> <code>App.config</code> con
+   <code>aspnet_regiis -pef "connectionStrings"</code> o Credential Manager.</li>
+<li><strong>Validar el certificado.</strong> Instalar el certificado de cada equipo en
+   <code>TrustedPeople</code> y eliminar el callback que devuelve <code>true</code>.</li>
+<li><strong>Cambiar GET por POST</strong> en las operaciones con credenciales, si el servicio lo
+   permite. Si no, al menos no registrar la URL completa.</li>
+<li><strong>Hashear la clave de login.</strong> <code>PBKDF2</code> o <code>bcrypt</code> en lugar de comparación directa.</li>
+<li><strong>Registrar eventos</strong> con nivel, equipo y resultado, sin secretos.</li>
+<li><strong>Rotar credenciales</strong> de SQL, CashDro y SMTP, y volver a compilar.</li>
+<li><strong>Restringir la base</strong>: el usuario de la aplicación solo necesita <code>SELECT</code> sobre dos
+   tablas y <code>EXECUTE</code> sobre cuatro procedimientos.</li>
+</ol>
+<h3 id="174-datos-sensibles">17.4 Datos sensibles</h3>
+<p>La aplicación revela cuánto efectivo hay en cada equipo. Ese dato, agregado, es
+información sensible desde el punto de vista físico. La base y los reportes deben tratarse
+como información restringida: acceso nominado, respaldo cifrado y sin exportaciones a
+equipos personales.</p>
+<hr/>
+<h2 id="18-limites-y-estado-de-esta-revision">18. Límites y estado de esta revisión</h2>
+<h3 id="181-estado">18.1 Estado</h3>
+<ul>
+<li>Documentación elaborada por <strong>análisis estático</strong> del código.</li>
+<li><strong>No se compiló</strong> el proyecto durante esta revisión.</li>
+<li><strong>No se probó contra hardware CashDro</strong>. El comportamiento descrito del equipo proviene
+  del código y de los nombres de campo, no de una ejecución real.</li>
+<li>Las credenciales del repositorio son marcadores (<code>USUARIO_CASHDRO</code>,
+  <code>CLAVE_CASHDRO</code>), no credenciales funcionales.</li>
+<li>Las direcciones IP reales fueron omitidas de toda la documentación.</li>
+</ul>
+<h3 id="182-limites-funcionales">18.2 Límites funcionales</h3>
+<table>
+<thead>
+<tr>
+<th>Límite</th>
+<th>Detalle</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Windows-only</strong></td>
+<td>WinForms + CEF + <code>System.Data.SqlClient</code>; no hay versión para Linux ni macOS</td>
+</tr>
+<tr>
+<td>Solo lectura</td>
+<td>No configura ni opera la máquina</td>
+</tr>
+<tr>
+<td>Moneda fija</td>
+<td><code>CLP</code> codificada en dos URL</td>
+</tr>
+<tr>
+<td>Sin multi-cliente</td>
+<td>El cliente sale de <code>GetParametros</code>, uno solo</td>
+</tr>
+<tr>
+<td>Sin exportación</td>
+<td>No hay CSV, Excel ni PDF</td>
+</tr>
+<tr>
+<td>Sin historial en pantalla</td>
+<td>El histórico vive en SQL; la UI muestra el presente</td>
+</tr>
+<tr>
+<td>Sin alertas activas</td>
+<td>El correo está implementado pero desactivado en las rutas principales</td>
+</tr>
+<tr>
+<td>Sin reintentos</td>
+<td>Un fallo de red se descarta</td>
+</tr>
+<tr>
+<td>Sin timeouts</td>
+<td><code>WebClient</code> por defecto: hasta 100 s por llamada</td>
+</tr>
+</tbody>
+</table>
+<h3 id="183-defectos-conocidos">18.3 Defectos conocidos</h3>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Defecto</th>
+<th>Impacto</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>cargaGridDevice</code> ignora el parámetro <code>IP</code> y usa una URL fija</td>
+<td>El detalle puede mostrar siempre el mismo equipo</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>button1</code> ejecuta una ruta de depuración con otro host fijo</td>
+<td>No usar en producción</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>ChequeaCashdroBakgroud</code> limpia la grilla visible</td>
+<td>El parque aparece vacío a los 30 min</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Equipos en ⚠ no se pueden inspeccionar</td>
+<td>La celda queda <code>ReadOnly</code></td>
+</tr>
+<tr>
+<td>5</td>
+<td><code>catch</code> vacíos en varias rutas</td>
+<td>Fallas invisibles</td>
+</tr>
+<tr>
+<td>6</td>
+<td><code>code</code> del JSON nunca se valida</td>
+<td>Se pinta una grilla vacía como éxito</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Iconos desde <code>D:\imagenes\</code></td>
+<td>Falla en equipos con otra estructura</td>
+</tr>
+<tr>
+<td>8</td>
+<td><code>Cef.Shutdown</code> comentado</td>
+<td>Procesos de Chromium pueden quedar vivos</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sin <code>Dispose</code> de los <code>Bitmap</code> creados por fila</td>
+<td>Presión de memoria en parques grandes</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Proyecto sin <code>Properties\</code> ni <code>packages\</code></td>
+<td>No compila sin recrearlos</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="19-estructura-del-repositorio">19. Estructura del repositorio</h2>
+<pre><code class="language-text">cashdro-params/
+├── LICENSE
+├── README.md
+├── docs/
+│   ├── datasheet.md          Manual de usuario y especificaciones
+│   ├── developer.md          Arquitectura, API y guía de extensión
+│   ├── REFERENCES.md         Fuentes y versiones citadas
+│   └── assets/
+│       ├── arquitectura.svg
+│       ├── flujo-sesion.svg
+│       └── modelo-niveles.svg
+└── versions/
+    └── Lectura-parametros-maquina-Cashdro/
+        ├── cashdro.sln
+        ├── cashdro.csproj
+        ├── App.config
+        ├── packages.config
+        ├── Program.cs
+        ├── Form1.cs
+        ├── Form1.Designer.cs
+        ├── Form1.resx
+        ├── dataClass.cs
+        ├── funciones.cs
+        ├── webBrownser.cs
+        ├── webBrownser.Designer.cs
+        ├── webBrownser.resx
+        ├── README.md
+        └── VERSION.md
+</code></pre>
+<hr/>
+<h2 id="20-documentacion-adicional">20. Documentación adicional</h2>
+<table>
+<thead>
+<tr>
+<th>Documento</th>
+<th>Contenido</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="https://github.com/jmadasme/cashdro-params/blob/main/datasheet.md"><code>docs/datasheet.md</code></a></td>
+<td>Manual de usuario, especificaciones, diccionario de parámetros, errores</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jmadasme/cashdro-params/blob/main/developer.md"><code>docs/developer.md</code></a></td>
+<td>Recorrido del código, contratos, deuda técnica, recetas de extensión</td>
+</tr>
+<tr>
+<td><a href="https://github.com/jmadasme/cashdro-params/blob/main/REFERENCES.md"><code>docs/REFERENCES.md</code></a></td>
+<td>Fuentes oficiales, versiones y grado de confianza</td>
+</tr>
+</tbody>
+</table>
+<p>Diagramas:</p>
+<table>
+<thead>
+<tr>
+<th>Diagrama</th>
+<th>Qué muestra</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>docs/assets/arquitectura.svg</code></td>
+<td>Capas, adaptadores y sistemas destino</td>
+</tr>
+<tr>
+<td><code>docs/assets/flujo-sesion.svg</code></td>
+<td>Los ocho pasos de una sesión</td>
+</tr>
+<tr>
+<td><code>docs/assets/modelo-niveles.svg</code></td>
+<td>Fianza, total y recuento sobre el recirculador</td>
+</tr>
+</tbody>
+</table>
+<hr/>
+<h2 id="21-licencia">21. Licencia</h2>
+<p>MIT. Ver <a href="LICENSE"><code>LICENSE</code></a>.</p>
+<pre><code class="language-text">Copyright (c) 2026 jmadasme
+</code></pre>
+<p>La licencia cubre el código de este repositorio. Las dependencias mantienen sus propias
+licencias: CefSharp y Chromium (BSD-3 y otras), Newtonsoft.Json (MIT) y
+DevComponents DotNetBar (comercial, no incluida).</p>
+<hr/>
+<h2 id="creditos">Créditos</h2>
+<p>Proyecto original de <strong>José Manuel Adasme</strong> (<code>jmadasme</code>), importado desde
+<code>jmadasme/Lectura-parametros-maquina-Cashdro</code>. La documentación de esta carpeta se
+elaboró sobre esa versión, sin modificarla.</p>
+<blockquote>
+<p><strong>Aviso final</strong>: esta es una herramienta de monitoreo, no un sistema de control. Toda
+decisión sobre efectivo, recargue o intervención técnica debe validarse en la máquina y
+con el procedimiento del fabricante.</p>
+</blockquote></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Lo que no funcionó</div><h2>Los tropiezos, documentados</h2><p class="section-sub">Las primeras versiones existen para que estos errores no se repitan: cada una dejó una decisión de diseño verificable.</p></div><div class="fail-grid reveal"><div class="fail"><div class="v">CashDroParams</div><h3>Validación TLS desactivada</h3><p>Para aceptar los certificados autofirmados de las máquinas, el código desactiva globalmente la validación TLS con ServerCertificateValidationCallback e IgnoreCertificateErrors. La alternativa documentada es instalar el certificado en TrustedPeople; se mantuvo el comportamiento original y se lo señaló como la decisión más riesgosa del proyecto.</p></div><div class="fail"><div class="v">CashDroParams</div><h3>El barrido vacía la grilla</h3><p>El barrido automático de treinta minutos limpia la grilla visible y no la vuelve a poblar, de modo que el parque parece vacío tras la primera ejecución. El README describe el defecto y la forma de revalidar manualmente; no se corrigió porque el análisis se limitó a documentar el código recibido.</p></div><div class="fail"><div class="v">CashDroParams</div><h3>Equipos en falla no inspeccionables</h3><p>Los equipos marcados con advertencia tienen la celda en ReadOnly, así que no se puede abrir su detalle desde la aplicación. El README reconoce que la inspección debe hacerse en la consola del fabricante y deja la limitación como parte del comportamiento heredado, sin prometer una solución.</p></div><div class="fail"><div class="v">CashDroParams</div><h3>Proyecto incompleto</h3><p>El árbol publicado no compila tal cual: faltan Properties/AssemblyInfo.cs, Resources, Settings, packages y la dependencia DevComponents DotNetBar 14.1.0.18. También hay iconos referenciados desde D:\imagenes. El README enumera los archivos faltantes y explica cómo recrearlos, en lugar de afirmar una compilación que no verificó.</p></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Ficha de evaluación</div><h2>Cómo se mide este proyecto</h2><p class="section-sub">Seis criterios con la misma escala en todo el catálogo, para comparar sin marketing.</p></div><div class="rating-head reveal"><div class="rating-avg">3.5<small>/5</small></div><div><strong>Madurez global</strong><p>Herramienta de supervisión descrita con rigor, pero difícil de reproducir: depende de Windows, SQL Server y componentes ausentes, y no fue compilada ni probada contra hardware.</p></div></div><div class="rating reveal"><div class="rating-row"><div class="rating-name">Madurez</div><div class="rating-bar"><i style="width:60%"></i></div><div class="rating-score">3/5</div><div class="rating-note">Herramienta operativa completa en su lógica, aunque sin compilación ni pruebas verificadas.</div></div><div class="rating-row"><div class="rating-name">Reproducibilidad</div><div class="rating-bar"><i style="width:40%"></i></div><div class="rating-score">2/5</div><div class="rating-note">Faltan archivos de proyecto y un componente comercial; reconstruir el entorno exige trabajo manual.</div></div><div class="rating-row"><div class="rating-name">Documentación</div><div class="rating-bar"><i style="width:100%"></i></div><div class="rating-score">5/5</div><div class="rating-note">README detallado con arquitectura, endpoints, hallazgos de seguridad y guía de reconstrucción.</div></div><div class="rating-row"><div class="rating-name">Honestidad de límites</div><div class="rating-bar"><i style="width:100%"></i></div><div class="rating-score">5/5</div><div class="rating-note">Declara análisis estático, falta de pruebas con hardware y cada defecto conocido.</div></div><div class="rating-row"><div class="rating-name">Valor demostrativo</div><div class="rating-bar"><i style="width:80%"></i></div><div class="rating-score">4/5</div><div class="rating-note">Ejemplo real de integración WinForms con SQL Server, CefSharp y APIs de hardware.</div></div><div class="rating-row"><div class="rating-name">Facilidad de despliegue</div><div class="rating-bar"><i style="width:40%"></i></div><div class="rating-score">2/5</div><div class="rating-note">Solo Windows, con SQL Server, certificados, componentes comerciales y rutas locales.</div></div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">Preguntas típicas</div><h2>Lo que suelen preguntar</h2></div><div class="faq reveal"><details><summary>¿Qué es este proyecto?</summary><p>Una aplicación WinForms que consulta máquinas CashDro por HTTPS/JSON y muestra diagnóstico, piezas por moneda y estado en tres grillas, con barrido automático cada 30 minutos hacia SQL Server.</p></details><details><summary>¿Funciona tal como se publica?</summary><p>No. El proyecto no incluye Properties/AssemblyInfo.cs, Resources, Settings, packages ni DevComponents DotNetBar 14.1.0.18, y el README aclara que no se compiló ni probó contra hardware.</p></details><details><summary>¿Qué límites operativos tiene?</summary><p>Desactiva la validación TLS para aceptar certificados autofirmados, el barrido vacía la grilla visible y los equipos en advertencia no se pueden inspeccionar; además no hay reintentos ni timeouts y la moneda está fija en CLP.</p></details><details><summary>¿Cómo se despliega?</summary><p>Solo en Windows con .NET Framework 4.6.1, SQL Server con la base GestionCashdro y CefSharp; hay que recrear los archivos faltantes, instalar DotNetBar y corregir las rutas D:\imagenes.</p></details></div></div></section>
 <section class="cta"><div class="wrap"><div class="cta-box reveal">
   <div class="kicker">Siguiente paso</div><h2>¿Te animás?</h2>
   <p>Usá esto como base y referencia para cashdro params. Este proyecto es la prueba de que se puede hacer con componentes reales.</p>
