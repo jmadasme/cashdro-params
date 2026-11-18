@@ -205,6 +205,7 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
 
 </style>
 <link rel="stylesheet" href="assets/community.css?v=1">
+<link href="rec/player.css?v=1" rel="stylesheet"/>
 </head>
 <body>
 <header class="nav"><div class="wrap nav-in">
@@ -213,7 +214,8 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
     <a href="#proyecto">Proyecto</a>
     <a href="#versiones">Versiones</a>
     <a href="#stack">Stack</a>
-    <a href="#docs">Docs</a>
+    <a href="#video">Video</a>
+<a href="#docs">Docs</a>
     <a href="#comunidad">Comunidad</a>
     <a class="btn btn-ghost" style="padding:9px 15px" href="/iot/">← IoT</a>
   </nav>
@@ -237,7 +239,46 @@ h2{font-size:clamp(30px,4vw,46px);line-height:1.05;letter-spacing:-.04em;margin:
   </div>
 </div></section>
 
-<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">C#</div><div class="stat-label">WinForms</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">versión</div></div><div class="stat"><div class="stat-num">HTTPS</div><div class="stat-label">API CashDro</div></div><div class="stat"><div class="stat-num">Windows</div><div class="stat-label">plataforma</div></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>Aplicación de escritorio para supervisar un parque de máquinas CashDro desde Windows. Consulta cada equipo por HTTPS y JSON, muestra diagnóstico, piezas por moneda y estado en tres grillas, y ejecuta un barrido automático cada treinta minutos que persiste los resultados en SQL Server. Está destinada a operadores de sala de juegos o retail que necesitan una vista consolidada sin entrar máquina por máquina.</p><p>El repositorio conserva el código de una herramienta operativa, no un producto instalable: depende de .NET Framework 4.6.1, CefSharp, SQL Server y componentes comerciales. La documentación proviene de análisis estático y declara que no se compiló ni se probó contra hardware; ese contexto explica sus decisiones más discutibles, como desactivar la validación TLS o limpiar la grilla durante el barrido.</p></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El proyecto en detalle</div><h2>Documentación preservada</h2><p class="section-sub">El README original, completo y en su contexto.</p></div><div class="detail rich reveal">
+<section class="stats"><div class="wrap stats-grid"><div class="stat"><div class="stat-num">C#</div><div class="stat-label">WinForms</div></div><div class="stat"><div class="stat-num">1</div><div class="stat-label">versión</div></div><div class="stat"><div class="stat-num">HTTPS</div><div class="stat-label">API CashDro</div></div><div class="stat"><div class="stat-num">Windows</div><div class="stat-label">plataforma</div></div></div></section>
+<section class="section tight rec-section" id="video" style="--accent:#2E7DFF;--accent2:#14F195">
+<div class="wrap">
+<div class="rec-kicker">REC · VIDEO · 3:03</div>
+<h2 class="rec-h2">Lectura de parámetros CashDro</h2>
+<p class="rec-lead">Aplicación de escritorio en C# que sondea por HTTPS la API interna de cada máquina CashDro, muestra diagnóstico y niveles en tres grillas y construye un histórico en SQL Server.</p>
+<div class="rec-banner">
+<span class="rec-banner-icon">📋</span>
+<strong>Puedes copiar y pegar los comandos del video desde el video !!!</strong>
+<span>Pausá, seleccioná el texto de la terminal y copiá.</span>
+</div>
+<div class="rec-shell">
+<div class="rec-bar"><i></i><i></i><i></i><span class="rec-title">Lectura de parámetros CashDro · asciinema</span><span class="rec-rec"><b></b>REC</span></div>
+<div class="rec-screen-wrap">
+<div class="rec-screen" id="rec-screen"></div>
+<div class="rec-poster" id="rec-poster">
+<div class="rec-kicker">ASCIINEMA · 3:03</div>
+<h3>Lectura de parámetros CashDro</h3>
+<p>Aplicación de escritorio en C# que sondea por HTTPS la API interna de cada máquina CashDro, muestra diagnóstico y niveles en tres grillas y construye un histórico en SQL Server.</p>
+<div class="rec-poster-meta">cashdro-params · código real</div>
+<button class="rec-btn rec-primary" id="rec-start" type="button">▶ Reproducir</button>
+</div>
+</div>
+<div class="rec-controls">
+<button class="rec-btn rec-primary" id="rec-play" type="button">▶ Reproducir</button>
+<button class="rec-btn" id="rec-restart" type="button">↺ Reiniciar</button>
+<input class="rec-progress" id="rec-range" type="range" min="0" max="1000" value="0" aria-label="Progreso"/>
+<span class="rec-time" id="rec-time">0:00 / 3:03</span>
+<select class="rec-speed" id="rec-speed" aria-label="Velocidad"><option value="1">1×</option><option value="1.25">1.25×</option><option value="1.5">1.5×</option><option value="2">2×</option></select>
+<button class="rec-btn" id="rec-full" type="button" title="Pantalla completa">⛶</button>
+<button class="rec-btn" id="rec-copy" type="button">⧉ Copiar comandos</button>
+<a class="rec-download" href="rec/cashdro-params.cast" download>descargar .cast</a>
+</div>
+</div>
+<p class="rec-note">Los fragmentos provienen del código real del repositorio. Las credenciales, cadenas de conexión e IPs se omiten a propósito; la base y los procedimientos almacenados no se incluyen en el repo.</p>
+<div class="rec-chapters"><span class="rec-chip"><b>0:06</b> EL PROBLEMA</span><span class="rec-chip"><b>0:21</b> ARQUITECTURA</span><span class="rec-chip"><b>0:35</b> ARRANQUE</span><span class="rec-chip"><b>0:47</b> APERTURA</span><span class="rec-chip"><b>1:00</b> ACCESO</span><span class="rec-chip"><b>1:14</b> EL PARQUE</span><span class="rec-chip"><b>1:29</b> TLS</span><span class="rec-chip"><b>1:44</b> DIAGNÓSTICO</span><span class="rec-chip"><b>1:57</b> NIVELES</span><span class="rec-chip"><b>2:11</b> PERSISTENCIA</span><span class="rec-chip"><b>2:27</b> VISOR</span><span class="rec-chip"><b>2:39</b> LÍMITES</span></div>
+</div>
+</section>
+
+<section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El concepto</div><h2>Qué es y por qué existe</h2></div><div class="rich reveal"><p>Aplicación de escritorio para supervisar un parque de máquinas CashDro desde Windows. Consulta cada equipo por HTTPS y JSON, muestra diagnóstico, piezas por moneda y estado en tres grillas, y ejecuta un barrido automático cada treinta minutos que persiste los resultados en SQL Server. Está destinada a operadores de sala de juegos o retail que necesitan una vista consolidada sin entrar máquina por máquina.</p><p>El repositorio conserva el código de una herramienta operativa, no un producto instalable: depende de .NET Framework 4.6.1, CefSharp, SQL Server y componentes comerciales. La documentación proviene de análisis estático y declara que no se compiló ni se probó contra hardware; ese contexto explica sus decisiones más discutibles, como desactivar la validación TLS o limpiar la grilla durante el barrido.</p></div></div></section><section class="section tight"><div class="wrap"><div class="section-head reveal"><div class="kicker">El proyecto en detalle</div><h2>Documentación preservada</h2><p class="section-sub">El README original, completo y en su contexto.</p></div><div class="detail rich reveal">
 <p><strong>Aplicación de escritorio para consultar los parámetros técnicos y financieros de un
 parque de máquinas CashDro desde un único puesto Windows.</strong></p>
 <p><code>C#</code> · <code>WinForms</code> · <code>.NET Framework 4.6.1</code> · <code>SQL Server</code> · <code>CefSharp</code> · <code>Licencia MIT</code></p>
@@ -1858,5 +1899,7 @@ con el procedimiento del fabricante.</p>
 <script>window.PORTFOLIO_COMMUNITY={account:"jmadasme",repo:"cashdro-params",coinNamespace:"jmadasme-cashdro-params-coins-v1",faqs:[{"q": "¿Qué parámetros lee?", "a": "Parámetros de configuración, estado y datos financieros expuestos por la API de CashDro."}, {"q": "¿Puede operar la máquina?", "a": "El alcance documentado es lectura de parámetros. No es una herramienta de cobro."}, {"q": "¿Dónde pongo las credenciales?", "a": "En la configuración local de la app; la versión publicada usa placeholders y no incluye secretos."}, {"q": "¿Funciona en Linux?", "a": "No: es una aplicación WinForms para Windows."}, {"q": "¿Se probó con hardware?", "a": "No en esta revisión. El código se conserva como versión histórica y la validación física queda pendiente."}]};</script>
 <script src="assets/community.js?v=2" defer></script>
 
+<script defer src="rec/cashdro-params.cast.js?v=1"></script>
+<script defer src="rec/player.js?v=1"></script>
 </body>
 </html>
